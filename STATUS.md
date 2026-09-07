@@ -2,21 +2,23 @@
 
 **PROJECT:** ECO-BRAIN
 
-**STATUS:** First ECO-CEL Proof of Operation in implementation
+**STATUS:** First ECO-CEL Proof of Operation verified in CI; PR pending human merge decision
 
-**CURRENT CAPABILITY:** Mission Control v0.1 + ECO-CEL control-cycle skeleton
+**CURRENT CAPABILITY:** Mission Control v0.1 + deterministic ECO-CEL control-cycle skeleton
 
-**LAST VERIFIED:** Pending CI verification
+**LAST VERIFIED:** 2026-09-07
 
 **BLOCKERS:** None known
 
 **NEXT CAPABILITY:** Cognitive Abstraction Layer (ECAL)
 
-**NEXT ACTION:** Verify the ECO-CEL cycle through automated tests, then decide whether to merge and connect the existing daily automations to the verified cycle.
+**NEXT ACTION:** Human review/merge of PR #1, then allow the existing daily automations to drive the verified cycle.
 
-**VERIFICATION:** Pending
+**VERIFICATION:** GitHub Actions `ECO-BRAIN Verification` — SUCCESS; pytest suite passed on the ECO-CEL branch.
 
 **DEPLOYMENT:** N/A
+
+**PROOF:** PR #1 — `feat: first ECO-CEL proof of operation`
 
 **AUTONOMY PERIMETER:**
 - Observe: automatic
