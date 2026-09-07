@@ -12,6 +12,10 @@ Complete and verify the first **ECO-CEL Proof of Operation**.
 
 Run the automated test suite for the ECO-CEL control-cycle skeleton and preserve the result as evidence.
 
+## Verification note
+
+The first CI attempt exposed an import-path issue in the test runner. The workflow was corrected to run with `PYTHONPATH=.`; a new verification run is required.
+
 ## After verification
 
 1. Confirm the cycle is genuinely demonstrated.
