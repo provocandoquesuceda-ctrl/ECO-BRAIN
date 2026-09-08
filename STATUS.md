@@ -8,13 +8,18 @@
 
 **LAST VERIFIED:** 2026-09-08
 
-**BLOCKERS:** None known.
+**BLOCKERS:** No repository blocker identified. The two daily automations exist in the automation layer, but their connection to the repository ECO-CEL cycle is not demonstrated by repository code or CI.
 
-**NEXT CAPABILITY CANDIDATE:** Connection of the two existing ECO-BRAIN daily automations to the verified ECO-CEL cycle. ECAL remains a later candidate and is not yet verified as the next implementation increment.
+**AUTOMATION VERIFICATION (2026-09-08):**
+- `ECO-BRAIN Daily Sprint`: configured and enabled; repository integration not evidenced.
+- `ECO-BRAIN Daily Verification`: configured and enabled; repository integration not evidenced.
+- No automation-specific test, workflow, or execution artifact was found in the repository during this sprint.
 
-**NEXT ACTION:** Verify the two existing daily automations and determine, from repository evidence, whether they are implemented, connected to ECO-CEL, tested, and operational.
+**NEXT CAPABILITY CANDIDATE:** Minimal, evidence-first connection/verification of the existing daily automations to the repository ECO-CEL cycle. ECAL remains a later candidate and is not yet verified as the next implementation increment.
 
-**VERIFICATION:** GitHub Actions `ECO-BRAIN Verification` — SUCCESS on the post-merge `main` commit `cbae5153e1609c588aff5b8ba647128699e66bb2` (run #9); pytest verification passed on the merged code.
+**NEXT ACTION:** Define the smallest repository-side verification artifact that can prove whether an automation run observes and records the current ECO-CEL state, without adding a new service or expanding architecture.
+
+**VERIFICATION:** GitHub Actions `ECO-BRAIN Verification` — SUCCESS on the post-merge `main` commit `cbae5153e1609c588aff5b8ba647128699e66bb2` (run #9); latest repository CI run observed on commit `fa976982378f5a71c75ef3862f6ef29857a52d88` (run #11) — SUCCESS.
 
 **DEPLOYMENT:** N/A
 
