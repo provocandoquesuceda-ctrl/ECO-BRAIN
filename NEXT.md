@@ -2,11 +2,15 @@
 
 ## Single priority
 
-Verify the two existing ECO-BRAIN daily automations against the now-verified ECO-CEL cycle before designing any new capability.
+Create the smallest repository-side verification artifact for the two existing ECO-BRAIN daily automations, without adding a new service or expanding architecture.
 
 ## Current verified milestone
 
 The first **ECO-CEL Proof of Operation** is implemented, tested, demonstrated within its technical scope, merged into `main`, and verified by post-merge CI.
+
+## Automation verification result (2026-09-08)
+
+Both daily automations are configured and enabled in the automation layer. Repository inspection found no automation-specific code/configuration, test, workflow, or execution artifact proving that either automation invokes or records the repository ECO-CEL cycle.
 
 ## Verification discipline
 
@@ -16,17 +20,16 @@ No stage is inferred from the previous one. Each status requires repository or e
 
 ## Current next action
 
-Locate the two existing daily automations in the repository and verify, for each one:
+Define and implement only a minimal, reversible verification artifact that can answer:
 
-1. whether it exists in code/configuration;
-2. whether it invokes or is connected to the ECO-CEL cycle;
-3. whether tests or CI evidence exist;
-4. whether there is execution evidence;
-5. what, if anything, is missing or failing.
+1. whether an automation run can observe the current repository state;
+2. whether it can record the ECO-CEL cycle result;
+3. whether CI can validate the artifact;
+4. whether execution evidence exists.
 
 ## Decision gate
 
-Only after that verification will ECO-BRAIN determine whether connecting the automations is the next implementation increment or whether another capability, including ECAL, is justified.
+Do not move to ECAL or add external infrastructure until this minimum automation-verification increment is either demonstrated or blocked by concrete evidence.
 
 ## Constraint
 
