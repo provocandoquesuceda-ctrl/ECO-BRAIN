@@ -2,23 +2,32 @@
 
 ## Single priority
 
-Complete and verify the first **ECO-CEL Proof of Operation**.
+Verify the two existing ECO-BRAIN daily automations against the now-verified ECO-CEL cycle before designing any new capability.
 
-## Cycle
+## Current verified milestone
 
-`OBSERVAR → ANALIZAR → PRIORIZAR → PREPARAR → EJECUTAR/PROPONER → VERIFICAR → REGISTRAR → ACTUALIZAR → REPETIR`
+The first **ECO-CEL Proof of Operation** is implemented, tested, demonstrated within its technical scope, merged into `main`, and verified by post-merge CI.
+
+## Verification discipline
+
+`DISEÑADO → IMPLEMENTADO → PROBADO → DEMOSTRADO → COMPLETADO`
+
+No stage is inferred from the previous one. Each status requires repository or execution evidence.
 
 ## Current next action
 
-Run the automated test suite for the ECO-CEL control-cycle skeleton and preserve the result as evidence.
+Locate the two existing daily automations in the repository and verify, for each one:
 
-## Verification note
+1. whether it exists in code/configuration;
+2. whether it invokes or is connected to the ECO-CEL cycle;
+3. whether tests or CI evidence exist;
+4. whether there is execution evidence;
+5. what, if anything, is missing or failing.
 
-The first CI attempt exposed an import-path issue in the test runner. The workflow was corrected to run with `PYTHONPATH=.`; a new verification run is required.
+## Decision gate
 
-## After verification
+Only after that verification will ECO-BRAIN determine whether connecting the automations is the next implementation increment or whether another capability, including ECAL, is justified.
 
-1. Confirm the cycle is genuinely demonstrated.
-2. Update `STATUS.md` with verified evidence.
-3. Connect the two existing ECO-BRAIN daily automations to this cycle with the minimum necessary prompt changes.
-4. Do not add another service/platform unless a concrete blocker requires it.
+## Constraint
+
+Do not add another service/platform unless a concrete blocker requires it. Keep strategic, sensitive, and irreversible decisions under mandatory human governance.
