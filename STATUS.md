@@ -2,13 +2,15 @@
 
 **PROJECT:** ECO-BRAIN
 
-**STATUS:** First ECO-CEL Proof of Operation verified in CI and merged into `main`; post-merge CI verification successful. The Ecosystem Operational Scalability Framework v1.0 is formally approved and registered.
+**STATUS:** First ECO-CEL Proof of Operation verified in CI and merged into `main`; the Ecosystem Operational Scalability Framework v1.0 is formally approved and registered; the GitHub Copilot Vision → Demonstration integration is approved and documented.
 
 **CURRENT CAPABILITY:** Mission Control v0.1 + deterministic ECO-CEL control-cycle skeleton.
 
 **LAST VERIFIED:** 2026-09-08
 
-**GOVERNANCE UPDATE (2026-09-08):** The **Marco de Escalabilidad Operacional del Ecosistema de Ecosistemas v1.0** was approved and registered at `docs/MARCO-ESCALABILIDAD-OPERACIONAL-ECOSISTEMA-DE-ECOSISTEMAS-v1.0.md`.
+**GOVERNANCE UPDATE (2026-09-08):** The **Marco de Escalabilidad Operacional del Ecosistema de Ecosistemas v1.0** and the **GitHub Copilot — Visión → Demostración v1.0** integration are approved. The latter is registered at `docs/INTEGRACION-GITHUB-COPILOT-VISION-DEMO-ECOSISTEMA-v1.0.md`.
+
+**STRATEGIC CAPABILITY APPROVED:** GitHub Copilot/Agents are recognized as an operational accelerator for reducing the distance between vision/problem and a verifiable demonstration. This does not grant unlimited autonomy or strategic authority.
 
 **BLOCKERS:** No repository blocker identified. The two daily automations exist in the automation layer, but their connection to the repository ECO-CEL cycle is not demonstrated by repository code or CI.
 
@@ -17,11 +19,13 @@
 - `ECO-BRAIN Daily Verification`: configured and enabled; repository integration not evidenced.
 - No automation-specific test, workflow, or execution artifact was found in the repository during this sprint.
 
-**NEXT CAPABILITY CANDIDATE:** Minimal, evidence-first connection/verification of the existing daily automations to the repository ECO-CEL cycle. ECAL remains a later candidate and is not yet verified as the next implementation increment.
+**FIRST OPERATIONAL LEAP:** `ECO-BRAIN × Copilot — First Operational Leap v0.1` is authorized as the first vertical demonstration of the approved Vision → Demonstration capability. Its object remains the real automation-to-ECO-CEL gap already identified.
 
-**NEXT ACTION:** Define and implement only a minimal, reversible verification artifact that can prove whether an automation run observes and records the current ECO-CEL state, without adding a new service or expanding architecture.
+**NEXT CAPABILITY CANDIDATE:** Minimal, evidence-first connection/verification of the existing daily automations to the repository ECO-CEL cycle, using Copilot within an explicitly authorized and reversible perimeter where available.
 
-**VERIFICATION:** GitHub Actions `ECO-BRAIN Verification` — SUCCESS on the post-merge `main` commit `cbae5153e1609c588aff5b8ba647128699e66bb2` (run #9); latest repository CI run observed on commit `fa976982378f5a71c75ef3862f6ef29857a52d88` (run #11) — SUCCESS. The governance registration commit must receive its own CI verification before being treated as CI-verified.
+**NEXT ACTION:** Implement only the smallest reversible artifact required to demonstrate whether an automation run can observe current repository state, record an ECO-CEL result, and leave evidence that CI can validate. Copilot participation must itself be evidenced; it is not inferred from the result.
+
+**VERIFICATION:** The Copilot integration documentation commit `fbd722b7187a7e13039aef1ac885ee8346530d75` is now in `main` and requires its own CI execution before being treated as CI-verified.
 
 **DEPLOYMENT:** N/A
 
