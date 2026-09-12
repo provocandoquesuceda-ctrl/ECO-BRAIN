@@ -4,32 +4,29 @@
 
 **STATUS:** First ECO-CEL Proof of Operation verified in CI and merged into `main`; the Ecosystem Operational Scalability Framework v1.0 is formally approved and registered; the GitHub Copilot Vision → Demonstration integration is approved and documented.
 
-**CURRENT CAPABILITY:** Mission Control v0.1 + deterministic ECO-CEL control-cycle skeleton.
+**CURRENT CAPABILITY:** Mission Control v0.1 + deterministic ECO-CEL control-cycle skeleton + repository-side automation evidence contract.
 
-**LAST VERIFIED:** 2026-09-08
+**LAST VERIFIED:** 2026-09-12
 
-**GOVERNANCE UPDATE (2026-09-08):** The **Marco de Escalabilidad Operacional del Ecosistema de Ecosistemas v1.0** and the **GitHub Copilot — Visión → Demostración v1.0** integration are approved. The latter is registered at `docs/INTEGRACION-GITHUB-COPILOT-VISION-DEMO-ECOSISTEMA-v1.0.md`.
+**GOVERNANCE UPDATE (2026-09-08):** The **Marco de Escalabilidad Operacional del Ecosistema de Ecosistemas v1.0** and the **GitHub Copilot — Visión → Demostración v1.0** integration are approved and registered.
 
-**STRATEGIC CAPABILITY APPROVED:** GitHub Copilot/Agents are recognized as an operational accelerator for reducing the distance between vision/problem and a verifiable demonstration. This does not grant unlimited autonomy or strategic authority.
+**AUTOMATION VERIFICATION:**
+- `ECO-BRAIN Daily Sprint`: configured and enabled.
+- `ECO-BRAIN Daily Verification`: configured and enabled.
+- Repository-side evidence contract implemented and tested in CI.
+- A real scheduled `ECO-BRAIN Daily Sprint` run created an evidence record in `evidence/automation-runs/2026-09-12-eco-brain-daily-sprint.json`.
 
-**BLOCKERS:** No repository blocker identified. The two daily automations exist in the automation layer, but their connection to the repository ECO-CEL cycle is not demonstrated by repository code or CI.
+**CURRENT EVIDENCE:**
+- Evidence commit: `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`.
+- Trace: `TRC-20260912-DAILY-SPRINT-004`.
+- Observed commit: `e9bdb516cb0d2df68a4feb9494a0e56936f80340`.
+- Record includes automation name, observed commit, ECO-CEL status, trace identifier, execution evidence, and timestamp.
 
-**AUTOMATION VERIFICATION (2026-09-08):**
-- `ECO-BRAIN Daily Sprint`: configured and enabled; repository integration not evidenced.
-- `ECO-BRAIN Daily Verification`: configured and enabled; repository integration not evidenced.
-- No automation-specific test, workflow, or execution artifact was found in the repository during this sprint.
+**BLOCKERS:** The evidence path is now proven for `ECO-BRAIN Daily Sprint`; the equivalent independent evidence for `ECO-BRAIN Daily Verification` is not yet present. The CI result for evidence commit `6730d34c2c1f6e00bb036b8ab689c4467531f1c7` is still pending verification.
 
-**FIRST OPERATIONAL LEAP:** `ECO-BRAIN × Copilot — First Operational Leap v0.1` is authorized as the first vertical demonstration of the approved Vision → Demonstration capability. Its object remains the real automation-to-ECO-CEL gap already identified.
+**FIRST OPERATIONAL LEAP:** Partially demonstrated. Repository observation and evidence recording are demonstrated for the current scheduled sprint run. Full connection of both daily automations, final CI verification, and completion remain pending.
 
-**NEXT CAPABILITY CANDIDATE:** Minimal, evidence-first connection/verification of the existing daily automations to the repository ECO-CEL cycle, using Copilot within an explicitly authorized and reversible perimeter where available.
-
-**NEXT ACTION:** Implement only the smallest reversible artifact required to demonstrate whether an automation run can observe current repository state, record an ECO-CEL result, and leave evidence that CI can validate. Copilot participation must itself be evidenced; it is not inferred from the result.
-
-**VERIFICATION:** The Copilot integration documentation commit `fbd722b7187a7e13039aef1ac885ee8346530d75` is now in `main` and requires its own CI execution before being treated as CI-verified.
-
-**DEPLOYMENT:** N/A
-
-**PROOF:** PR #1 — `feat: first ECO-CEL proof of operation` — merged into `main`.
+**NEXT ACTION:** Verify CI for commit `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`, then obtain and register independent evidence from `ECO-BRAIN Daily Verification`.
 
 **AUTONOMY PERIMETER:**
 - Observe: automatic
