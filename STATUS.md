@@ -6,7 +6,7 @@
 
 **CURRENT CAPABILITY:** Mission Control v0.1 + deterministic ECO-CEL control-cycle skeleton + repository-side automation evidence contract.
 
-**LAST VERIFIED:** 2026-09-12
+**LAST VERIFIED:** 2026-09-13
 
 **GOVERNANCE UPDATE (2026-09-08):** The **Marco de Escalabilidad Operacional del Ecosistema de Ecosistemas v1.0** and the **GitHub Copilot — Visión → Demostración v1.0** integration are approved and registered.
 
@@ -14,19 +14,19 @@
 - `ECO-BRAIN Daily Sprint`: configured and enabled.
 - `ECO-BRAIN Daily Verification`: configured and enabled.
 - Repository-side evidence contract implemented and tested in CI.
-- A real scheduled `ECO-BRAIN Daily Sprint` run created an evidence record in `evidence/automation-runs/2026-09-12-eco-brain-daily-sprint.json`.
+- A real scheduled `ECO-BRAIN Daily Sprint` run created a new evidence record for 2026-09-13.
 
 **CURRENT EVIDENCE:**
-- Evidence commit: `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`.
-- Trace: `TRC-20260912-DAILY-SPRINT-004`.
-- Observed commit: `e9bdb516cb0d2df68a4feb9494a0e56936f80340`.
+- New evidence commit: `2373cadd11664ba53c44adf93a58a4343a93719d`.
+- Trace: `TRC-20260913-DAILY-SPRINT-005`.
+- Observed commit: `28f97d241d3a6ddb0edf15046ab82887435d258e`.
 - Record includes automation name, observed commit, ECO-CEL status, trace identifier, execution evidence, and timestamp.
 
-**BLOCKERS:** The evidence path is now proven for `ECO-BRAIN Daily Sprint`; the equivalent independent evidence for `ECO-BRAIN Daily Verification` is not yet present. The CI result for evidence commit `6730d34c2c1f6e00bb036b8ab689c4467531f1c7` is still pending verification.
+**BLOCKERS:** The evidence path is proven for `ECO-BRAIN Daily Sprint`; independent evidence for `ECO-BRAIN Daily Verification` is still not present. The CI result for the new evidence/documentation commits must be verified before completion.
 
-**FIRST OPERATIONAL LEAP:** Partially demonstrated. Repository observation and evidence recording are demonstrated for the current scheduled sprint run. Full connection of both daily automations, final CI verification, and completion remain pending.
+**FIRST OPERATIONAL LEAP:** Partially demonstrated. Repository observation and evidence recording are demonstrated for repeated scheduled `ECO-BRAIN Daily Sprint` runs. Full connection of both daily automations, final CI verification, and completion remain pending.
 
-**NEXT ACTION:** Verify CI for commit `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`, then obtain and register independent evidence from `ECO-BRAIN Daily Verification`.
+**NEXT ACTION:** Verify CI for commit `2373cadd11664ba53c44adf93a58a4343a93719d`, then obtain and register independent evidence from `ECO-BRAIN Daily Verification`.
 
 **AUTONOMY PERIMETER:**
 - Observe: automatic
