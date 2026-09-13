@@ -8,19 +8,20 @@ Finish the minimum evidence chain for the two existing ECO-BRAIN daily automatio
 
 The first **ECO-CEL Proof of Operation** is implemented, tested, demonstrated within its technical scope, merged into `main`, and verified by post-merge CI.
 
-The repository-side automation evidence contract is implemented and tested. On 2026-09-12, the scheduled `ECO-BRAIN Daily Sprint` run observed repository state and created a verifiable ECO-CEL evidence record.
+The repository-side automation evidence contract is implemented and tested. Scheduled `ECO-BRAIN Daily Sprint` runs have now created verifiable ECO-CEL evidence records on 2026-09-12 and 2026-09-13.
 
 ## Evidence registered
 
-- Evidence path: `evidence/automation-runs/2026-09-12-eco-brain-daily-sprint.json`
-- Evidence commit: `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`
-- Trace: `TRC-20260912-DAILY-SPRINT-004`
-- Current state: Sprint connection partially demonstrated; full delivery not complete.
+- Latest evidence path: `evidence/automation-runs/2026-09-13-eco-brain-daily-sprint.json`
+- Latest evidence commit: `2373cadd11664ba53c44adf93a58a4343a93719d`
+- Latest trace: `TRC-20260913-DAILY-SPRINT-005`
+- Observed commit: `28f97d241d3a6ddb0edf15046ab82887435d258e`
+- Current state: Sprint connection demonstrated repeatedly; full delivery not complete.
 
 ## Remaining approved work
 
 1. Obtain independent evidence from `ECO-BRAIN Daily Verification`.
-2. Verify CI for the evidence commit and any subsequent documentation commit.
+2. Verify CI for the latest evidence and documentation commits and any subsequent CI.
 3. Confirm the evidence chain is independently reproducible.
 4. Only then update the state to ready for delivery.
 
@@ -32,7 +33,7 @@ No stage is inferred from the previous one. Each status requires repository or e
 
 ## Current next action
 
-Verify CI for commit `6730d34c2c1f6e00bb036b8ab689c4467531f1c7`; then register the first independent `ECO-BRAIN Daily Verification` evidence record.
+Verify CI for commit `2373cadd11664ba53c44adf93a58a4343a93719d`; then register the first independent `ECO-BRAIN Daily Verification` evidence record.
 
 ## Decision gate
 
