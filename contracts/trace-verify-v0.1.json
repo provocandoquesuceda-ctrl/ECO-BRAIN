@@ -1,0 +1,27 @@
+{
+  "contract_id": "TRACE-VERIFY-v0.1",
+  "version": "0.1",
+  "purpose": "Minimal cross-host contract for describing a verified execution without replacing the source host's native trace/evidence mechanism.",
+  "source_host": "provocandoquesuceda-ctrl/ECO-BRAIN",
+  "primitive_family": [
+    "TRACE",
+    "VERIFY"
+  ],
+  "required_fields": [
+    "trace_id",
+    "actor",
+    "input_ref",
+    "output_ref",
+    "timestamp",
+    "subject",
+    "criterion",
+    "result",
+    "evidence_ref"
+  ],
+  "rules": [
+    "The consuming host MUST preserve its native execution identity.",
+    "The consuming host MUST preserve a reference to the primary evidence produced by its own execution.",
+    "A consumer MAY adapt local execution metadata to this contract without copying the source host implementation.",
+    "result MUST be an explicit verification outcome."
+  ]
+}
