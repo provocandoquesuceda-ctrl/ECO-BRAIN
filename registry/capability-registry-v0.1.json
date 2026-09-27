@@ -9,24 +9,29 @@
     "prefer_low_adaptation_reuse": true,
     "compose_only_when_useful_and_verifiable": true
   },
-  "lifecycle": [
-    "IDENTIFIED",
-    "CONTRACTED",
-    "VERIFIED",
-    "CONSUMABLE",
-    "REUSED",
-    "COMPOSED"
-  ],
+  "lifecycle": ["IDENTIFIED","CONTRACTED","VERIFIED","CONSUMABLE","REUSED","COMPOSED"],
   "capabilities": [],
-  "proven_patterns": [
-    {
-      "pattern_id": "TRACE-VERIFY-REUSE-001",
-      "contract": "contracts/trace-verify-v0.1.json",
-      "source_host": "ECO-BRAIN",
-      "consumer": "VERCELOPS",
-      "implementation": "VERCELOPS:scripts/trace-verify-consumer.mjs",
-      "status": "EVIDENCE_PENDING_CLOSURE",
-      "promotion_rule": "Do not mark fully verified until a recoverable GitHub Actions run and artifact/evidence are available."
-    }
-  ]
+  "proven_patterns": [{
+    "pattern_id": "TRACE-VERIFY-REUSE-001",
+    "contract": "contracts/trace-verify-v0.1.json",
+    "source_host": "ECO-BRAIN",
+    "consumer": "VERCELOPS",
+    "implementation": "VERCELOPS:scripts/trace-verify-consumer.mjs",
+    "status": "VERIFIED",
+    "evidence": {
+      "workflow_run_id": 36337357322,
+      "run_number": 5,
+      "head_sha": "f4c2b7fe3370aac1a206c52d898b7044e894434c",
+      "workflow": "VERCELOPS Install Build",
+      "event": "push",
+      "conclusion": "success",
+      "job_id": 108670644040,
+      "artifact_id": 10937681353,
+      "artifact_name": "vercelops-install-build-36337357322",
+      "artifact_sha256": "9cb0c8d18a5570a0bc18c1f2fef8aaf18b0fb6171f251cf9c709eb45bd2f21aa",
+      "artifact_expired": false,
+      "steps_verified": ["Build","Verify build evidence","Consume ECO-BRAIN TRACE+VERIFY contract","Persist build evidence","Upload evidence"]
+    },
+    "promotion_rule": "Evidence-backed pattern; subsequent CAPs require their own source, contract, consumer and execution evidence."
+  }]
 }
