@@ -1,0 +1,32 @@
+{
+  "registry_id": "ECO-BRAIN-CAPABILITY-REGISTRY",
+  "version": "0.1",
+  "inventory_total": 120,
+  "policy": {
+    "rebuild_existing_capabilities": false,
+    "require_evidence_for_promotion": true,
+    "preserve_consumer_identity": true,
+    "prefer_low_adaptation_reuse": true,
+    "compose_only_when_useful_and_verifiable": true
+  },
+  "lifecycle": [
+    "IDENTIFIED",
+    "CONTRACTED",
+    "VERIFIED",
+    "CONSUMABLE",
+    "REUSED",
+    "COMPOSED"
+  ],
+  "capabilities": [],
+  "proven_patterns": [
+    {
+      "pattern_id": "TRACE-VERIFY-REUSE-001",
+      "contract": "contracts/trace-verify-v0.1.json",
+      "source_host": "ECO-BRAIN",
+      "consumer": "VERCELOPS",
+      "implementation": "VERCELOPS:scripts/trace-verify-consumer.mjs",
+      "status": "EVIDENCE_PENDING_CLOSURE",
+      "promotion_rule": "Do not mark fully verified until a recoverable GitHub Actions run and artifact/evidence are available."
+    }
+  ]
+}
