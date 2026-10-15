@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CAP-002 Consumer Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "capability", "task", "proposed_action"],
+  "properties": {
+    "contract_version": { "const": "1.0" },
+    "capability": { "const": "CAP-002" },
+    "task": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "proposed_action": { "type": "string", "minLength": 1, "maxLength": 1000 }
+  }
+}
