@@ -1,0 +1,14 @@
+{
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "trace_id": "TRC-ECO-BRAIN-DV-INDEPENDENT-20261017T132518Z",
+  "timestamp": "2026-10-17T13:25:18Z",
+  "capacidad_verificada": "ECO-BRAIN Daily Verification — control independiente",
+  "commit_observado": "3e99d6d315e4a4563ea2c95f5332de90e04e1857",
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT; STATUS.md last verified 2026-09-13 reports ECO-CEL proof verified in CI and merged",
+  "resultado": "BLOCKED_NOT_DEMONSTRATED",
+  "trace_id_origin": "independent audit trace; not the scheduled automation's original trace",
+  "limitation": "Detailed scheduled-run history, original execution ID/trace, output, jobs and artifacts are not exposed by the connected automation interface.",
+  "main_head_ci_run": "38671961651 — success on commit 3e99d6d315e4a4563ea2c95f5332de90e04e1857",
+  "latest_repo_ci_run": "38741587447 — success on PR head 0bdeadce338e6f9abaf4865087b017dcc18aff20; not proof of the scheduled automation",
+  "only_next_verifiable_step": "Enable authorized read-only access to detailed ECO-BRAIN Daily Verification execution history."
+}
