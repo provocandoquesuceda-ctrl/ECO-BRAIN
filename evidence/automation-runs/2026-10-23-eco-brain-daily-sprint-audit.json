@@ -25,6 +25,15 @@
     "main_combined_statuses": []
   },
   "limitation": "ECO-BRAIN Daily Verification is disabled. The connected automation interface exposes no original native execution trace or detailed output for that automation. This audit trace does not substitute for its native execution evidence.",
-  "ci_after_evidence_commit": "PENDING_VERIFICATION",
-  "only_next_verifiable_step": "Obtain authorized execution evidence for Daily Verification without changing other automations, then verify the CI run triggered by this evidence commit."
+  "ci_after_evidence_commit": {
+    "run_id": "39965617178",
+    "job_id": "120454587513",
+    "event": "pull_request",
+    "head_commit": "e1449ee926ec4ab8972d07cb97e0e7c6f2c249fb",
+    "result": "success",
+    "tests": "PYTHONPATH=. pytest -q",
+    "artifacts": 0,
+    "verified_at": "2026-10-23T13:58:23Z"
+  },
+  "only_next_verifiable_step": "Obtain authorized execution evidence for Daily Verification without changing other automations; its native execution and trace remain unproven."
 }
