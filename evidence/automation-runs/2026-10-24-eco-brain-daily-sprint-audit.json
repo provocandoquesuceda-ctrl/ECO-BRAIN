@@ -16,13 +16,21 @@
     "status_file_last_verified": "2026-09-13",
     "daily_sprint_enabled": true,
     "daily_verification_enabled": false,
-    "latest_verified_audit_pr_ci_run": "39965717578",
-    "latest_verified_audit_pr_ci_job": "120454945467",
-    "latest_verified_audit_pr_ci_result": "success",
-    "latest_verified_audit_pr_ci_commit": "eb9cd746cca2f6ee41cd113f771332707c1c369e",
-    "latest_verified_audit_pr_ci_artifacts": 0,
+    "previous_verified_audit_pr_ci_run": "39965717578",
+    "previous_verified_audit_pr_ci_job": "120454945467",
+    "previous_verified_audit_pr_ci_result": "success",
+    "previous_verified_audit_pr_ci_commit": "eb9cd746cca2f6ee41cd113f771332707c1c369e",
+    "previous_verified_audit_pr_ci_artifacts": 0,
     "open_draft_pr": 3,
-    "main_combined_statuses_for_audit_commit": []
+    "main_combined_statuses_for_audit_commit": [],
+    "ci_after_initial_evidence_commit": {
+      "run_id": "40097552335",
+      "job_id": "120882868134",
+      "head_commit": "b4b1384834703f0fde4f3b9def4d0375c3f73a30",
+      "result": "success",
+      "tests": "PYTHONPATH=. pytest -q",
+      "artifacts": 0
+    }
   },
   "limitation": "Daily Verification is disabled. The automation connector exposes no native execution trace or detailed output for that automation. The current Daily Sprint run was in_progress at observation time; this audit trace does not substitute for Daily Verification evidence.",
   "only_next_verifiable_step": "Obtain separately authorized execution of ECO-BRAIN Daily Verification and its native output/trace without changing ECO-CONTINUITY, ECO-CEL, ECO-SHIP, or any other automation."
