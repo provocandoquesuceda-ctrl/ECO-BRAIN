@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "automation_id": "6a9eb572391c81918b1213ce2c8add7a",
+  "automation_name": "ECO-BRAIN Daily Sprint",
+  "automation_run_id": "a67f90ca-a7ac-832e-bf46-db292b001de7",
+  "trace_id": "TRC-ECO-BRAIN-DAILY-SPRINT-AUDIT-20261023T135523Z",
+  "trace_id_origin": "Trace generated for this independent Sprint audit; not the native trace of ECO-BRAIN Daily Verification.",
+  "timestamp": "2026-10-23T13:55:23Z",
+  "capacidad_verificada": "Repository state, existing ECO-BRAIN CI, evidence inventory, and automation status; independent Daily Verification remains unproven.",
+  "commit_observado": "3e99d6d315e4a4563ea2c95f5332de90e04e1857",
+  "eco_cel_status": "NOT_REVALIDATED; STATUS.md reports last verification 2026-09-13; this audit did not execute or modify ECO-CEL.",
+  "resultado": "PARTIAL_VERIFICATION",
+  "run_status_at_observation": "in_progress",
+  "evidence": {
+    "latest_main_ci_run": "38671961651",
+    "latest_main_ci_job": "116216920646",
+    "latest_main_ci_result": "success",
+    "latest_main_ci_artifacts": 0,
+    "latest_pilot_ci_run": "38741587447",
+    "latest_pilot_ci_job": "116444384837",
+    "latest_pilot_ci_result": "success",
+    "latest_pilot_ci_artifacts": 0,
+    "latest_github_actions_run_time": "2026-10-15T13:18:32Z",
+    "open_draft_pr": 2,
+    "main_combined_statuses": []
+  },
+  "limitation": "ECO-BRAIN Daily Verification is disabled. The connected automation interface exposes no original native execution trace or detailed output for that automation. This audit trace does not substitute for its native execution evidence.",
+  "ci_after_evidence_commit": {
+    "run_id": "39965617178",
+    "job_id": "120454587513",
+    "event": "pull_request",
+    "head_commit": "e1449ee926ec4ab8972d07cb97e0e7c6f2c249fb",
+    "result": "success",
+    "tests": "PYTHONPATH=. pytest -q",
+    "artifacts": 0,
+    "verified_at": "2026-10-23T13:58:23Z"
+  },
+  "only_next_verifiable_step": "Obtain authorized execution evidence for Daily Verification without changing other automations; its native execution and trace remain unproven."
+}
