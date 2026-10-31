@@ -9,5 +9,17 @@
   "commit_observado": "3e99d6d315e4a4563ea2c95f5332de90e04e1857",
   "observed_branch": "main",
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT; latest repository evidence dated 2026-09-13 reports cycle_verified; no ECO-CEL execution or modification performed.",
-  "resultado": "INDEPENDENT_AUDIT_EXECUTED; POST_COMMIT_CI_PENDING; platform-native trace_id unavailable."
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; POST_COMMIT_CI_SUCCESS; platform-native trace_id unavailable.",
+  "ci_after_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 41204554830,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/41204554830",
+    "commit_sha": "037d57d87e954a2dc6f3f493583f2ebb228eea8a",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 124546876829,
+    "job_name": "test",
+    "job_conclusion": "success",
+    "artifacts": []
+  }
 }
