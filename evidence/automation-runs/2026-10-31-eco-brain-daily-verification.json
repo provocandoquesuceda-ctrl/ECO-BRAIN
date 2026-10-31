@@ -21,5 +21,19 @@
     "job_name": "test",
     "job_conclusion": "success",
     "artifacts": []
+  },
+  "ci_after_record_update": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 41204594965,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/41204594965",
+    "commit_sha": "de82b27606a2bfba70873cffd007089cb32a8ca3",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 124546992674,
+    "job_name": "test",
+    "job_conclusion": "success",
+    "artifacts": [],
+    "event": "pull_request",
+    "note": "This run verified the record-update commit before this update. A new PR CI run is required to validate the current final commit."
   }
 }
