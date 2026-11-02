@@ -50,9 +50,33 @@
     "test_step": "PYTHONPATH=. pytest -q — success",
     "artifacts": []
   },
-  "ci_after_current_evidence_commit": {
+  "initial_evidence_commit": "003718eec7a1b670bc8494ea76211b2bf3f559d7",
+  "ci_after_initial_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 41458018805,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/41458018805",
+    "event": "pull_request",
+    "pull_request": 7,
+    "head_branch": "audit/eco-brain-daily-verification-20261102",
+    "head_commit_sha": "003718eec7a1b670bc8494ea76211b2bf3f559d7",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 125319586032,
+    "job_name": "test",
+    "job_conclusion": "success",
+    "successful_steps": [
+      "Run actions/checkout@v4",
+      "Run actions/setup-python@v5",
+      "Run python -m pip install --upgrade pip pytest",
+      "Run PYTHONPATH=. pytest -q"
+    ],
+    "artifacts": []
+  },
+  "ci_after_record_update_commit": {
     "status": "pending",
-    "note": "Will be populated only after GitHub Actions reports a completed result for the current evidence commit."
+    "note": "A second CI run is required to validate this evidence-record update commit."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT; the main-branch evidence dated 2026-09-13 reports cycle_verified; ECO-CEL was not executed or modified.",
   "perimeter": {
@@ -64,5 +88,5 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; 2026-11-02 evidence created on an isolated branch; post-commit CI pending; main unchanged; no native platform trace_id available."
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit 003718eec7a1b670bc8494ea76211b2bf3f559d7 passed post-commit workflow run 41458018805 and job 125319586032; evidence-record update and its CI remain pending; main unchanged; no native platform trace_id available."
 }
