@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CAP-002 Consumer Response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "capability", "mission_id", "task", "status", "next_action", "execution_mode", "trace_id", "trace_events"],
+  "properties": {
+    "contract_version": { "const": "1.0" },
+    "capability": { "const": "CAP-002" },
+    "mission_id": { "type": "string", "pattern": "^MIS-[0-9a-f]{12}$" },
+    "task": { "type": "string", "minLength": 1 },
+    "status": { "const": "cycle_verified" },
+    "next_action": { "type": "string", "minLength": 1 },
+    "execution_mode": { "const": "human_governed" },
+    "trace_id": { "type": "string", "pattern": "^TRC-[0-9a-f]{12}$" },
+    "trace_events": { "const": 9 }
+  }
+}
