@@ -106,7 +106,7 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; evidence commit 1537e87b6b40cd51d1dc0ad1a87fd277e81635cc passed post-commit CI run 41648677645 (completed/success); final evidence update commit CI pending; main unchanged; platform-native trace_id unavailable.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit 1537e87b6b40cd51d1dc0ad1a87fd277e81635cc passed CI run 41648677645; evidence update commit c66987a7ea7085f2229d2c040951b74b109578c3 passed CI run 41648783837; final evidence-record commit CI pending; main unchanged; platform-native trace_id unavailable.",
   "ci_after_evidence_commit": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 41648677645,
@@ -120,6 +120,30 @@
     "status": "completed",
     "conclusion": "success",
     "job_id": 125960707271,
+    "job_name": "test",
+    "job_status": "completed",
+    "job_conclusion": "success",
+    "successful_steps": [
+      "Run actions/checkout@v4",
+      "Run actions/setup-python@v5",
+      "Run python -m pip install --upgrade pip pytest",
+      "Run PYTHONPATH=. pytest -q"
+    ],
+    "artifacts": []
+  },
+  "ci_after_record_update_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 41648783837,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/41648783837",
+    "event": "pull_request",
+    "pull_request": 9,
+    "head_branch": "audit/eco-brain-daily-verification-20261103",
+    "head_commit_sha": "c66987a7ea7085f2229d2c040951b74b109578c3",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 125961084909,
     "job_name": "test",
     "job_status": "completed",
     "job_conclusion": "success",
