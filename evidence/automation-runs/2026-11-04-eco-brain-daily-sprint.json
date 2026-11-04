@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "automation_name": "ECO-BRAIN Daily Sprint",
+  "timestamp": "2026-11-04T13:43:21.323572+00:00",
+  "capability": "ECO-BRAIN Mission Control v0.1 — app entry point and deterministic, human-governed control cycle.",
+  "observed_commit": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+  "observed_branch": "main",
+  "source_integrity": {
+    "method": "Git blob SHA-1 comparison against exact source contents fetched from GitHub main",
+    "files": {
+      "app.py": "08cd6f48994c0e7e8be6bd401e71b990b87a8cd0",
+      "core/mission_control.py": "9b4d4633a391b46f5c4e11c28f4180dd94fc621c",
+      "core/models.py": "4ccd22d8a359e5b8cc2c29ccea25b284b73778f4",
+      "tests/test_mission_control.py": "34acfbebbac47b82ed1a3bb4a25adf0335554972",
+      "tests/test_eco_cel_cycle.py": "60df4bbf285a39f1aab8aa23087e6b17b9f93f4c",
+      "core/automation_verification.py": "09a23169e6fdc32a50896e755511ddf0c620ac34",
+      "tests/test_automation_verification.py": "61e6f31cc986a3c45a0eeb5c60ea9003190810a1"
+    },
+    "result": "ALL_HASHES_MATCH"
+  },
+  "execution": {
+    "environment": "Isolated local workspace populated from exact GitHub source contents; no repository checkout or working-tree changes.",
+    "app_entry_point": {
+      "command": "python app.py",
+      "exit_code": 0,
+      "status": "received",
+      "mission_id": "MIS-58b8a8089cb4",
+      "trace_id": "TRC-470672d087a6",
+      "next_stage": "context"
+    },
+    "mission_control_cycle": {
+      "operation": "MissionControl.run_cycle",
+      "exit_code": 0,
+      "status": "cycle_verified",
+      "mission_id": "MIS-d7c06332d44d",
+      "trace_id": "TRC-226383cb889c",
+      "trace_events": 9,
+      "execution_mode": "human_governed",
+      "events": [
+        "MISSION_RECEIVED",
+        "MISSION_INITIALIZED",
+        "OBSERVED",
+        "ANALYZED",
+        "PRIORITIZED",
+        "PREPARED",
+        "PROPOSED",
+        "VERIFIED",
+        "STATE_UPDATED"
+      ],
+      "external_side_effects": false
+    }
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "exit_code": 0,
+    "passed": 5,
+    "failed": 0,
+    "duration": "0.15s"
+  },
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_SPRINT; no ECO-CEL execution or modification was performed. MissionControl.run_cycle is a deterministic local control-loop proof, not proof of a live ECO-CEL integration.",
+  "automation_run_identity": "The native automation_run_id was not exposed in this execution context; no run ID has been inferred or fabricated.",
+  "artifacts": [],
+  "artifact_note": "The existing ECO-BRAIN Verification workflow runs pytest but has no upload-artifact step. This evidence JSON is preserved as a versioned repository file; no Actions artifact is claimed.",
+  "result": "MISSION_CONTROL_APP_AND_CONTROL_CYCLE_EXECUTED; FIVE_TESTS_PASSED; SOURCE_HASHES_MATCH; CI_PENDING",
+  "perimeter": {
+    "main_modified": false,
+    "architecture_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_repositories_modified": false,
+    "other_automations_modified": false
+  }
+}
