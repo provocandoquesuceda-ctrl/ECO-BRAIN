@@ -61,7 +61,7 @@
   "automation_run_identity": "The native automation_run_id was not exposed in this execution context; no run ID has been inferred or fabricated.",
   "artifacts": [],
   "artifact_note": "The existing ECO-BRAIN Verification workflow runs pytest but has no upload-artifact step. This evidence JSON is preserved as a versioned repository file; no Actions artifact is claimed.",
-  "result": "MISSION_CONTROL_APP_AND_CONTROL_CYCLE_EXECUTED; FIVE_TESTS_PASSED; SOURCE_HASHES_MATCH; INITIAL_EVIDENCE_COMMIT_CI_SUCCESS; FINAL_RECORD_COMMIT_CI_PENDING",
+  "result": "MISSION_CONTROL_APP_AND_CONTROL_CYCLE_EXECUTED; FIVE_TESTS_PASSED; SOURCE_HASHES_MATCH; CI_VERIFICATION_RECORDED_IN_GITHUB_PULL_REQUEST_CHECKS",
   "perimeter": {
     "main_modified": false,
     "architecture_changed": false,
@@ -81,5 +81,6 @@
     "job_conclusion": "success",
     "artifact_count": 0,
     "note": "This run verified the initial evidence commit. The final evidence-record update is validated by a subsequent pull-request CI run."
-  }
+  },
+  "ci_verification_policy": "GitHub Actions checks on the current pull-request head are authoritative for the latest evidence-record commit. The initial evidence commit CI run is recorded above; subsequent head verification is visible in the pull-request checks."
 }
