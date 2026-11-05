@@ -107,7 +107,7 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; evidence commit d2f6ebe85ab9157ee5731351ec27747dbd4e4844 passed CI run 41840514938 (57); record-update commit 89bfbf1c5aa9efe7f064d48317e29e98f9d60388 passed CI run 41840596976 (58); trace-correction commit 0d8ebd3176a9723366edadb5173888f929514d71 passed CI run 41840692534 (59); final commit with the confirmed automation_run_id is being validated; main unchanged.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; final evidence commit 076e6076fad89c682c4bd005c0ff02d033ef5d25 passed CI run 41840819246, job 126611614501, with PYTHONPATH=. pytest -q successful; historical automation status at capture preserved; final status of this historical run is not independently exposed by the current platform read interface; main unchanged.",
   "ci_after_evidence_commit": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 41840514938,
@@ -183,5 +183,31 @@
       "Run PYTHONPATH=. pytest -q"
     ],
     "artifacts": []
-  }
+  },
+  "ci_after_final_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "event": "pull_request",
+    "pull_request": 10,
+    "head_branch": "audit/eco-brain-daily-verification-20261104",
+    "head_commit_sha": "076e6076fad89c682c4bd005c0ff02d033ef5d25",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "runs": [
+      {
+        "workflow_run_id": 41840819246,
+        "job_id": 126611614501,
+        "job_name": "test",
+        "status": "completed",
+        "conclusion": "success",
+        "test_step": "PYTHONPATH=. pytest -q — success",
+        "artifacts": []
+      }
+    ],
+    "verification_note": "Successful CI run observed against the final evidence commit."
+  },
+  "automation_run_status_final_confirmation": {
+    "status": "not_independently_reverified",
+    "note": "The available read-only automation interface exposes only the latest run, not this historical run's final state. The capture-time status above is preserved and is not represented as a final status."
+  },
+  "automation_run_status_at_capture_note": "The automation run was recorded as in_progress at the time of the 2026-11-04 audit capture; this is a historical capture state, not a final execution status."
 }
