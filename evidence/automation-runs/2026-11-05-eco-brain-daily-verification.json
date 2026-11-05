@@ -130,7 +130,7 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; evidence commit ade2255847baddb0acb2b084b86d087c85bc8154 passed CI run 42036174268 (64), job 127274817098; main unchanged. The platform run 367f2d30-64f4-832d-a9c7-e2f9e0de1a00 remained in_progress at the last read-only platform check.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; final evidence commit 0fcaa0c59b37c19f76a074b8ffd40cc41f5b196c passed CI runs 42036275929 and 42036401826; jobs 127275177676 and 127275587343 successful; automation run 367f2d30-64f4-832d-a9c7-e2f9e0de1a00 subsequently confirmed completed at 2026-11-05T13:32:56.584343Z; main unchanged.",
   "ci_after_evidence_commit": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 42036174268,
@@ -155,5 +155,41 @@
       "Run PYTHONPATH=. pytest -q"
     ],
     "artifacts": []
+  },
+  "automation_run_status_at_capture": "in_progress",
+  "ci_after_final_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "event": "pull_request",
+    "pull_request": 12,
+    "head_branch": "audit/eco-brain-daily-verification-20261105",
+    "head_commit_sha": "0fcaa0c59b37c19f76a074b8ffd40cc41f5b196c",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "runs": [
+      {
+        "workflow_run_id": 42036275929,
+        "job_id": 127275177676,
+        "job_name": "test",
+        "status": "completed",
+        "conclusion": "success",
+        "test_step": "PYTHONPATH=. pytest -q — success",
+        "artifacts": []
+      },
+      {
+        "workflow_run_id": 42036401826,
+        "job_id": 127275587343,
+        "job_name": "test",
+        "status": "completed",
+        "conclusion": "success",
+        "test_step": "PYTHONPATH=. pytest -q — success",
+        "artifacts": []
+      }
+    ],
+    "verification_note": "Two successful CI runs were observed against the final evidence commit."
+  },
+  "automation_run_status_final_confirmation": {
+    "status": "completed",
+    "completed_at": "2026-11-05T13:32:56.584343Z",
+    "source": "Read-only automation platform peek; same automation_run_id."
   }
 }
