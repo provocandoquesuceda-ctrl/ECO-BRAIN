@@ -106,7 +106,7 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit 1537e87b6b40cd51d1dc0ad1a87fd277e81635cc passed CI run 41648677645; evidence update commit c66987a7ea7085f2229d2c040951b74b109578c3 passed CI run 41648783837; final evidence-record commit CI pending; main unchanged; platform-native trace_id unavailable.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; final evidence commit ac660a2f2614f34a21c8fcd2787b4cbb289fd568 passed CI run 41648873218, job 125961402687, with PYTHONPATH=. pytest -q successful; historical automation status at capture preserved; final status of this historical run is not independently exposed by the current platform read interface; main unchanged.",
   "ci_after_evidence_commit": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 41648677645,
@@ -154,5 +154,30 @@
       "Run PYTHONPATH=. pytest -q"
     ],
     "artifacts": []
+  },
+  "ci_after_final_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "event": "pull_request",
+    "pull_request": 9,
+    "head_branch": "audit/eco-brain-daily-verification-20261103",
+    "head_commit_sha": "ac660a2f2614f34a21c8fcd2787b4cbb289fd568",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "runs": [
+      {
+        "workflow_run_id": 41648873218,
+        "job_id": 125961402687,
+        "job_name": "test",
+        "status": "completed",
+        "conclusion": "success",
+        "test_step": "PYTHONPATH=. pytest -q — success",
+        "artifacts": []
+      }
+    ],
+    "verification_note": "Successful CI run observed against the final evidence commit."
+  },
+  "automation_run_status_final_confirmation": {
+    "status": "not_independently_reverified",
+    "note": "The available read-only automation interface exposes only the latest run, not this historical run's final state. The capture-time status above is preserved and is not represented as a final status."
   }
 }
