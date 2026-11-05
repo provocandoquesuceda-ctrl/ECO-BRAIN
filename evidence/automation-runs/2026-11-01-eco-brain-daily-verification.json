@@ -14,7 +14,10 @@
     "name": "ECO-BRAIN Verification",
     "path": ".github/workflows/tests.yml",
     "triggers": {
-      "push": ["main", "eco-cel/**"],
+      "push": [
+        "main",
+        "eco-cel/**"
+      ],
       "pull_request": true
     },
     "test_command": "PYTHONPATH=. pytest -q"
@@ -91,5 +94,30 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; TWO_POST_COMMIT_PR_CI_RUNS_SUCCESSFUL; current evidence file update commit eb626788cad7371516af62e76935691ca4e1826d passed run 41310896680; final audit record commit validation follows this update; main_unchanged; platform-native trace_id unavailable."
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; final evidence commit 4cdee06a67c69a6ec9bfdcd351f9367f5d1a40c2 passed CI run 41311043616, job 124861291239, with PYTHONPATH=. pytest -q successful; historical automation status at capture preserved; final status of this historical run is not independently exposed by the current platform read interface; main unchanged.",
+  "ci_after_final_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "event": "pull_request",
+    "pull_request": 5,
+    "head_branch": "audit/eco-brain-daily-verification-20261101",
+    "head_commit_sha": "4cdee06a67c69a6ec9bfdcd351f9367f5d1a40c2",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "runs": [
+      {
+        "workflow_run_id": 41311043616,
+        "job_id": 124861291239,
+        "job_name": "test",
+        "status": "completed",
+        "conclusion": "success",
+        "test_step": "PYTHONPATH=. pytest -q — success",
+        "artifacts": []
+      }
+    ],
+    "verification_note": "Successful CI run observed against the final evidence commit."
+  },
+  "automation_run_status_final_confirmation": {
+    "status": "not_independently_reverified",
+    "note": "The available read-only automation interface exposes only the latest run, not this historical run's final state. The capture-time status above is preserved and is not represented as a final status."
+  }
 }
