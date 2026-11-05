@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "automation_id": "6a9eb572391c81918b1213ce2c8add7a",
+  "automation_name": "ECO-BRAIN Daily Sprint",
+  "automation_run_id": "79e8ebcb-6918-8326-afbb-65eab54943cb",
+  "automation_run_status_at_observation": "in_progress",
+  "automation_run_started_at": "2026-10-25T13:53:44.335727Z",
+  "trace_id": "TRC-ECO-BRAIN-DAILY-SPRINT-AUDIT-20261025T135344Z",
+  "trace_id_origin": "Generated for this independent Daily Sprint audit; not a native trace from ECO-BRAIN Daily Verification.",
+  "timestamp": "2026-10-25T13:53:44.335727Z",
+  "capacidad_verificada": "Repository status, Daily Verification enablement state, existing GitHub Actions CI and the open evidence-only audit PR. Independent Daily Verification remains unproven.",
+  "commit_observado": "3e99d6d315e4a4563ea2c95f5332de90e04e1857",
+  "eco_cel_status": "NOT_REVALIDATED; STATUS.md and NEXT.md record last verification 2026-09-13; this audit did not execute or modify ECO-CEL.",
+  "resultado": "PARTIAL_VERIFICATION",
+  "evidence": {
+    "status_file_last_verified": "2026-09-13",
+    "daily_sprint_enabled": true,
+    "daily_verification_enabled": false,
+    "latest_main_ci": {
+      "run_id": "38671961651",
+      "job_id": "116216920646",
+      "commit": "3e99d6d315e4a4563ea2c95f5332de90e04e1857",
+      "result": "success",
+      "tests": "PYTHONPATH=. pytest -q",
+      "artifacts": 0
+    },
+    "latest_audit_pr_ci_before_this_record": {
+      "run_id": "40097635325",
+      "job_id": "120883113386",
+      "commit": "103761ea74587942510b0acd6e43ba9d56761c50",
+      "result": "success",
+      "tests": "PYTHONPATH=. pytest -q",
+      "artifacts": 0
+    },
+    "main_combined_statuses_for_observed_commit": [],
+    "open_draft_pr": 3,
+    "branch_before_this_record": "audit/eco-brain-daily-sprint-20261023",
+    "previous_branch_head": "103761ea74587942510b0acd6e43ba9d56761c50"
+  },
+  "limitation": "Daily Verification is disabled. The automation interface exposes no native execution output or original trace for that automation. This independent Sprint audit trace does not substitute for Daily Verification evidence. The current Sprint execution was in_progress at observation time; completion is not inferred.",
+  "only_next_verifiable_step": "Obtain explicitly authorized execution of ECO-BRAIN Daily Verification without changing ECO-CONTINUITY-001, ECO-CEL, ECO-SHIP, or any other automation; capture its native output/trace and verify the CI after the evidence commit."
+}
