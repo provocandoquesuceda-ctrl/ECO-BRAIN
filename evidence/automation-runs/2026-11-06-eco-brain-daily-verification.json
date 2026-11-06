@@ -148,9 +148,30 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "AUDIT_EVIDENCE_COMMITTED; independent repository and CI review completed. The current platform execution was in_progress at capture; final platform completion is not claimed. Post-commit CI verification is pending.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit bd100541bb7cd582daf4c82446862dd58ac0c33b passed GitHub Actions run 42227009406 (job 127922924830; PYTHONPATH=. pytest -q: 5 passed); zero artifacts. Main remains unchanged. The platform execution was in_progress at capture; final completion is not claimed.",
   "ci_after_evidence_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42227009406,
+    "run_number": 74,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42227009406",
+    "event": "pull_request",
+    "pull_request": 14,
+    "head_branch": "audit/eco-brain-daily-verification-20261106",
+    "head_commit_sha": "bd100541bb7cd582daf4c82446862dd58ac0c33b",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 127922924830,
+    "job_name": "test",
+    "job_status": "completed",
+    "job_conclusion": "success",
+    "test_step": "PYTHONPATH=. pytest -q — 5 passed in 0.02s",
+    "artifacts": [],
+    "verification_note": "Run 74 validates the initial evidence commit. The evidence-only file was the sole changed file relative to observed main."
+  },
+  "ci_after_final_evidence_commit": {
     "status": "pending",
-    "note": "Populate only after GitHub Actions reports a completed run for the initial evidence commit."
+    "note": "Verify a new GitHub Actions run after the final evidence-record update commit; record its run, job, test result and artifact count in the PR."
   }
 }
