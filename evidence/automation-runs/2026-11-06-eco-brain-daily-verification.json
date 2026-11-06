@@ -148,7 +148,7 @@
     "eco_ship_modified": false,
     "other_automations_modified": false
   },
-  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit bd100541bb7cd582daf4c82446862dd58ac0c33b passed GitHub Actions run 42227009406 (job 127922924830; PYTHONPATH=. pytest -q: 5 passed); zero artifacts. Main remains unchanged. The platform execution was in_progress at capture; final completion is not claimed.",
+  "resultado": "INDEPENDENT_AUDIT_RECORDED; initial evidence commit bd100541bb7cd582daf4c82446862dd58ac0c33b passed run 42227009406 (job 127922924830; 5 passed); preceding evidence-record commit b5820a2b263a3faca69054a41ac081f0d65cd89a passed run 42227096503 (job 127923226565; 5 passed); both had zero artifacts. The final record update is being revalidated. Main remains unchanged. The platform execution was in_progress at capture; final completion is not claimed.",
   "ci_after_evidence_commit": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 42227009406,
@@ -171,7 +171,28 @@
     "verification_note": "Run 74 validates the initial evidence commit. The evidence-only file was the sole changed file relative to observed main."
   },
   "ci_after_final_evidence_commit": {
-    "status": "pending",
-    "note": "Verify a new GitHub Actions run after the final evidence-record update commit; record its run, job, test result and artifact count in the PR."
+    "status": "to_be_recorded_in_pr_14_after_ci_completion",
+    "note": "The post-commit CI result for the final evidence-record commit produced by this update will be recorded in the PR description after GitHub Actions completes."
+  },
+  "ci_after_previous_evidence_record_commit": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42227096503,
+    "run_number": 75,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42227096503",
+    "event": "pull_request",
+    "pull_request": 14,
+    "head_branch": "audit/eco-brain-daily-verification-20261106",
+    "head_commit_sha": "b5820a2b263a3faca69054a41ac081f0d65cd89a",
+    "base_branch": "main",
+    "base_commit_sha": "c26494c2c6caa1fa31ded67e0df1f1c96f9602de",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 127923226565,
+    "job_name": "test",
+    "job_status": "completed",
+    "job_conclusion": "success",
+    "test_step": "PYTHONPATH=. pytest -q — 5 passed in 0.02s",
+    "artifacts": [],
+    "verification_note": "Run 75 validates the preceding evidence-record commit b5820a2b263a3faca69054a41ac081f0d65cd89a."
   }
 }
