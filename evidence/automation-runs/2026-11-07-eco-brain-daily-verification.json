@@ -58,15 +58,20 @@
     "architecture_changed": false,
     "workflow_changed": false
   },
-  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_EVIDENCE; CI_VALIDATION_PENDING",
+  "result": "PLATFORM_RUN_COMPLETED; EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_PERSISTED_EVIDENCE; CI_RUN_84_SUCCESS",
   "ci_validation": {
     "workflow": "ECO-BRAIN Verification",
-    "previous_workflow_run_id": 42382620809,
-    "previous_run_number": 82,
-    "previous_job_id": 128433259272,
-    "previous_result": "completed / success; 10 passed in 0.07s",
-    "previous_run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42382620809",
-    "current_record_validation": "Pending: this commit adds a test that validates this persisted JSON through the existing verifier. The resulting CI run will be recorded in the PR description."
+    "workflow_run_id": 42382802147,
+    "run_number": 84,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42382802147",
+    "job_id": 128433798682,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "11 passed in 0.08s",
+    "artifacts": [],
+    "note": "Run 84 validates the persisted evidence JSON through the existing verifier test. The final post-update CI run for the final evidence-record commit will be documented in PR #16."
   },
   "perimeter": {
     "main_modified": false,
