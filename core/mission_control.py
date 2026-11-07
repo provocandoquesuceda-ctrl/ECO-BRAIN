@@ -4,6 +4,18 @@ from core.models import Mission, Trace
 class MissionControl:
     """Minimal orchestration loop for ECO-BRAIN v0.1 and ECO-CEL proofing."""
 
+    CYCLE_EVENTS = (
+        "MISSION_RECEIVED",
+        "MISSION_INITIALIZED",
+        "OBSERVED",
+        "ANALYZED",
+        "PRIORITIZED",
+        "PREPARED",
+        "PROPOSED",
+        "VERIFIED",
+        "STATE_UPDATED",
+    )
+
     def __init__(self) -> None:
         self.traces: list[Trace] = []
 
@@ -22,7 +34,7 @@ class MissionControl:
         return result
 
     def run_cycle(self, task: str, next_action: str) -> dict:
-        """Execute a deterministic ECO-CEL control cycle without external side effects.
+        """Execute a deterministic cycle and verify its trace before success.
 
         The default execution posture is proposal-only. This proves continuity and
         traceability while keeping strategic, sensitive, and irreversible actions
@@ -40,12 +52,25 @@ class MissionControl:
             "PROPOSED",
             {"action": next_action, "execution_mode": "human_governed"},
         )
-        self._trace(mission_id, "VERIFIED", {"criterion": "trace_complete"})
+
+        expected_prefix = self.CYCLE_EVENTS[:7]
+        self._verify_mission_events(mission_id, expected_prefix)
+
+        self._trace(
+            mission_id,
+            "VERIFIED",
+            {"criterion": "expected_trace_prefix_complete"},
+        )
         self._trace(
             mission_id,
             "STATE_UPDATED",
             {"next_action": next_action, "status": "ready_for_next_cycle"},
         )
+
+        self._verify_mission_events(mission_id, self.CYCLE_EVENTS)
+        mission_traces = [
+            trace for trace in self.traces if trace.mission_id == mission_id
+        ]
 
         return {
             "mission_id": mission_id,
@@ -53,11 +78,22 @@ class MissionControl:
             "status": "cycle_verified",
             "next_action": next_action,
             "execution_mode": "human_governed",
-            "trace_id": self.traces[-1].trace_id,
-            "trace_events": len(
-                [trace for trace in self.traces if trace.mission_id == mission_id]
-            ),
+            "trace_id": mission_traces[-1].trace_id,
+            "trace_events": len(mission_traces),
         }
+
+    def _verify_mission_events(
+        self, mission_id: str, expected_events: tuple[str, ...]
+    ) -> None:
+        """Raise instead of reporting success when the mission trace is incomplete."""
+        actual_events = tuple(
+            trace.event for trace in self.traces if trace.mission_id == mission_id
+        )
+        if actual_events != expected_events:
+            raise RuntimeError(
+                "Mission trace verification failed: "
+                f"expected {expected_events}, received {actual_events}"
+            )
 
     def _trace(self, mission_id: str, event: str, data: dict) -> None:
         self.traces.append(Trace(mission_id=mission_id, event=event, data=data))
