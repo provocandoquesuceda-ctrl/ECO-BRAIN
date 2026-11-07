@@ -1,6 +1,4 @@
-"""Evidence-first verification for automation-triggered ECO-CEL runs."""
-
-from datetime import datetime, timezone
+"""Evidence-first verification for automation execution records."""
 
 
 REQUIRED_FIELDS = {
@@ -21,7 +19,9 @@ def build_verification_record(
     trace_id: str,
     execution_evidence: str,
 ) -> dict:
-    """Build a minimal, serializable record for a real automation observation."""
+    """Build a minimal, serializable record for an explicit automation observation."""
+    from datetime import datetime, timezone
+
     record = {
         "automation_name": automation_name,
         "observed_commit": observed_commit,
@@ -36,7 +36,7 @@ def build_verification_record(
 
 
 def validate_verification_record(record: dict) -> None:
-    """Reject incomplete evidence; do not infer execution from code presence."""
+    """Reject missing evidence while preserving the observed ECO-CEL status verbatim."""
     missing = REQUIRED_FIELDS - record.keys()
     if missing:
         raise ValueError(f"Missing verification evidence fields: {sorted(missing)}")
@@ -45,6 +45,3 @@ def validate_verification_record(record: dict) -> None:
         value = record[field]
         if not isinstance(value, str) or not value.strip():
             raise ValueError(f"Verification field must be a non-empty string: {field}")
-
-    if record["eco_cel_status"] != "cycle_verified":
-        raise ValueError("eco_cel_status must be cycle_verified")
