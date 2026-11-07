@@ -16,7 +16,7 @@
   "repo_state": {
     "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
     "mission_control_pr_13": "merged",
-    "daily_verification_evidence_for_2026_11_07": "Absent at audit capture; this PR records it on an isolated branch.",
+    "daily_verification_evidence_for_2026_11_07": "Recorded on isolated PR #16 branch; not yet merged to main.",
     "prior_daily_verification_pr_14": {
       "number": 14,
       "state": "open",
@@ -37,7 +37,7 @@
     "latest_result_run_id": "0cf59d9b-130c-8325-a662-2473ea1be24a",
     "latest_result_created_at": "2026-11-07T13:50:07.704836Z",
     "latest_result_note": "The scheduled automation output was published during its execution and reported that evidence persistence was still pending. A subsequent read-only platform peek confirmed completed_at; this approved continuation records the missing GitHub evidence.",
-    "evidence_interpretation": "The platform execution is completed. Its published audit output was partial; this follow-up completes the repository evidence path and must be validated by CI."
+    "evidence_interpretation": "The platform execution is completed. Its published audit output was partial; this follow-up completes the repository evidence path."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or status is inferred.",
@@ -50,10 +50,20 @@
     "architecture_changed": false,
     "workflow_changed": false
   },
-  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED_PENDING_CI",
+  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED; CI_RUN_81_SUCCESS",
   "ci_validation": {
-    "status": "pending",
-    "note": "The GitHub Actions run triggered by this evidence commit must complete before this record can be considered CI-validated. The final CI result will be recorded in the pull request description."
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42382545582,
+    "run_number": 81,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42382545582",
+    "job_id": 128433024815,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "10 passed in 0.06s",
+    "artifacts": [],
+    "note": "Run 81 validates the initial evidence and verifier-correction commit. A final post-update CI run will validate the completed evidence record."
   },
   "perimeter": {
     "main_modified": false,
