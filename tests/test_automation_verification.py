@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 import pytest
 
 from core.automation_verification import (
@@ -61,3 +64,19 @@ def test_rejects_blank_eco_cel_status():
                 "execution_evidence": "automation_run:run-123",
             }
         )
+
+
+def test_daily_verification_evidence_passes_existing_verifier():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-07-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["verification_record"]["trace_id"] == evidence["trace_id"]
+    assert (
+        evidence["verification_record"]["eco_cel_status"]
+        == "NOT_REVALIDATED_IN_THIS_AUDIT"
+    )
