@@ -13,6 +13,14 @@
   "capacidad_verificada": "ECO-BRAIN Daily Verification: independent inspection of the repository main commit, scheduled automation execution metadata, workflow/CI evidence and persistence of this audit record. This does not execute or certify ECO-CEL.",
   "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
   "observed_branch": "main",
+  "verification_record": {
+    "automation_name": "ECO-BRAIN Daily Verification",
+    "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "observed_status": "completed",
+    "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+    "trace_id": "TRC-ECO-BRAIN-DV-20261107T134818Z",
+    "execution_evidence": "automation_run_id=0cf59d9b-130c-8325-a662-2473ea1be24a; started_at=2026-11-07T13:48:18.537228Z; completed_at=2026-11-07T13:50:07.922777Z; main_head=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30"
+  },
   "repo_state": {
     "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
     "mission_control_pr_13": "merged",
@@ -46,24 +54,19 @@
       "core/automation_verification.py",
       "tests/test_automation_verification.py"
     ],
-    "reason": "The existing verifier incorrectly required eco_cel_status == cycle_verified, preventing an honest Daily Verification record when ECO-CEL was not revalidated. It now validates that the status is explicit and non-empty while preserving its exact value.",
+    "reason": "The existing verifier incorrectly required eco_cel_status == cycle_verified, preventing an honest Daily Verification record when ECO-CEL was not revalidated. It now validates that the status is explicit and non-empty while preserving its exact value. The persisted evidence JSON is passed through the existing verifier by an automated test.",
     "architecture_changed": false,
     "workflow_changed": false
   },
-  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED; CI_RUN_81_SUCCESS",
+  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_EVIDENCE; CI_VALIDATION_PENDING",
   "ci_validation": {
     "workflow": "ECO-BRAIN Verification",
-    "workflow_run_id": 42382545582,
-    "run_number": 81,
-    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42382545582",
-    "job_id": 128433024815,
-    "job_name": "test",
-    "status": "completed",
-    "conclusion": "success",
-    "test_command": "PYTHONPATH=. pytest -q",
-    "test_result": "10 passed in 0.06s",
-    "artifacts": [],
-    "note": "Run 81 validates the initial evidence and verifier-correction commit. A final post-update CI run will validate the completed evidence record."
+    "previous_workflow_run_id": 42382620809,
+    "previous_run_number": 82,
+    "previous_job_id": 128433259272,
+    "previous_result": "completed / success; 10 passed in 0.07s",
+    "previous_run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42382620809",
+    "current_record_validation": "Pending: this commit adds a test that validates this persisted JSON through the existing verifier. The resulting CI run will be recorded in the PR description."
   },
   "perimeter": {
     "main_modified": false,
