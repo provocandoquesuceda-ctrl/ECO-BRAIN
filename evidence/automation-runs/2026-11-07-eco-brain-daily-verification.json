@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.1",
+  "automation_name": "ECO-BRAIN Daily Verification",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": "0cf59d9b-130c-8325-a662-2473ea1be24a",
+  "automation_run_status": "completed",
+  "scheduled_for": "2026-11-07T13:00:37Z",
+  "started_at": "2026-11-07T13:48:18.537228Z",
+  "completed_at": "2026-11-07T13:50:07.922777Z",
+  "timestamp": "2026-11-07T13:48:18.537228Z",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261107T134818Z",
+  "trace_id_origin": "Audit-generated from the exact platform started_at; the automation platform does not expose a separate native trace_id.",
+  "capacidad_verificada": "ECO-BRAIN Daily Verification: independent inspection of the repository main commit, scheduled automation execution metadata, workflow/CI evidence and persistence of this audit record. This does not execute or certify ECO-CEL.",
+  "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "observed_branch": "main",
+  "repo_state": {
+    "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "mission_control_pr_13": "merged",
+    "daily_verification_evidence_for_2026_11_07": "Absent at audit capture; this PR records it on an isolated branch.",
+    "prior_daily_verification_pr_14": {
+      "number": 14,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "evidence_date": "2026-11-06",
+      "head_commit": "a9743bb25e992a8764058990a5b56dc5e6e3cc04"
+    },
+    "documentation_pr_15": {
+      "number": 15,
+      "state": "open",
+      "draft": true,
+      "merged": false
+    }
+  },
+  "execution": {
+    "recorded_status": "completed",
+    "latest_result_run_id": "0cf59d9b-130c-8325-a662-2473ea1be24a",
+    "latest_result_created_at": "2026-11-07T13:50:07.704836Z",
+    "latest_result_note": "The scheduled automation output was published during its execution and reported that evidence persistence was still pending. A subsequent read-only platform peek confirmed completed_at; this approved continuation records the missing GitHub evidence.",
+    "evidence_interpretation": "The platform execution is completed. Its published audit output was partial; this follow-up completes the repository evidence path and must be validated by CI."
+  },
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or status is inferred.",
+  "verifier_change": {
+    "files": [
+      "core/automation_verification.py",
+      "tests/test_automation_verification.py"
+    ],
+    "reason": "The existing verifier incorrectly required eco_cel_status == cycle_verified, preventing an honest Daily Verification record when ECO-CEL was not revalidated. It now validates that the status is explicit and non-empty while preserving its exact value.",
+    "architecture_changed": false,
+    "workflow_changed": false
+  },
+  "result": "PLATFORM_RUN_COMPLETED; DAILY_VERIFICATION_EVIDENCE_RECORDED_PENDING_CI",
+  "ci_validation": {
+    "status": "pending",
+    "note": "The GitHub Actions run triggered by this evidence commit must complete before this record can be considered CI-validated. The final CI result will be recorded in the pull request description."
+  },
+  "perimeter": {
+    "main_modified": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_automations_modified": false,
+    "automation_schedule_or_prompt_modified": false
+  }
+}
