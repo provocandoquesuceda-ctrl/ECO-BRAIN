@@ -44,20 +44,20 @@
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or current status is inferred.",
-  "result": "AUTOMATION_RUN_IN_PROGRESS_AT_CAPTURE; EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_PERSISTED_EVIDENCE; CI_RUN_87_SUCCESS; FINAL_RECORD_COMMIT_CI_PENDING",
+  "result": "AUTOMATION_RUN_IN_PROGRESS_AT_CAPTURE; EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_PERSISTED_EVIDENCE; CI_RUN_88_SUCCESS; FINAL_RECORD_COMMIT_CI_PENDING",
   "ci_validation": {
     "workflow": "ECO-BRAIN Verification",
-    "workflow_run_id": 42485841556,
-    "run_number": 87,
-    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42485841556",
-    "job_id": 128747394421,
+    "workflow_run_id": 42485912988,
+    "run_number": 88,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42485912988",
+    "job_id": 128747612436,
     "job_name": "test",
     "status": "completed",
     "conclusion": "success",
     "test_command": "PYTHONPATH=. pytest -q",
     "test_result": "12 passed in 0.08s",
     "artifacts": [],
-    "note": "Run 87 validates the 2026-11-08 persisted evidence JSON through the existing verifier test. This metadata update creates the final evidence-record commit; its post-commit CI is pending and will be recorded in PR #16."
+    "note": "Run 88 validates the 2026-11-08 evidence record and its dedicated verifier test on commit 576e78dbf7335ed92c77ba27a7188af5cbf1b0e0. This CI metadata update creates a new final evidence-record commit; its post-commit CI will be checked and recorded in PR #16."
   },
   "perimeter": {
     "main_modified": false,
