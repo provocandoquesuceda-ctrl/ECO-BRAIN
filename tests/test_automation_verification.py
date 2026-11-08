@@ -66,6 +66,20 @@ def test_rejects_blank_eco_cel_status():
         )
 
 
+def test_rejects_unknown_eco_cel_status():
+    with pytest.raises(ValueError, match="eco_cel_status must be one of"):
+        validate_verification_record(
+            {
+                "automation_name": "ECO-BRAIN Daily Verification",
+                "observed_commit": "abc123",
+                "observed_status": "completed",
+                "eco_cel_status": "designed",
+                "trace_id": "TRC-test",
+                "execution_evidence": "automation_run:run-123",
+            }
+        )
+
+
 def test_daily_verification_evidence_passes_existing_verifier():
     evidence_path = (
         Path(__file__).resolve().parents[1]
@@ -80,7 +94,6 @@ def test_daily_verification_evidence_passes_existing_verifier():
         evidence["verification_record"]["eco_cel_status"]
         == "NOT_REVALIDATED_IN_THIS_AUDIT"
     )
-
 
 
 def test_daily_verification_20261108_evidence_passes_existing_verifier():
