@@ -5,11 +5,11 @@
   "automation_run_id": "879756ff-0a70-832b-9c47-9bf873bb9e14",
   "automation_run_status_at_capture": "in_progress",
   "scheduled_for": "2026-11-08T13:00:37Z",
-  "started_at": "2026-11-08T13:33:33.502570Z",
+  "started_at": "2026-11-08T13:42:58.652994Z",
   "completed_at": null,
-  "timestamp": "2026-11-08T13:33:33.502570Z",
-  "trace_id": "TRC-ECO-BRAIN-DV-20261108T133333Z",
-  "trace_id_origin": "Audit-generated from the exact platform started_at; the automation platform does not expose a separate native trace_id.",
+  "timestamp": "2026-11-08T13:42:58.652994Z",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261108T134258Z",
+  "trace_id_origin": "Audit-generated from the latest exact platform last_run.started_at (2026-11-08T13:42:58.652994Z); the automation platform does not expose a separate native trace_id.",
   "capacidad_verificada": "ECO-BRAIN Daily Verification: independent inspection of the observed main commit, the scheduled automation run metadata, existing PR/CI evidence, and persistence of this daily audit record. This does not execute or certify ECO-CEL.",
   "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
   "observed_branch": "main",
@@ -18,8 +18,8 @@
     "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
     "observed_status": "in_progress",
     "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
-    "trace_id": "TRC-ECO-BRAIN-DV-20261108T133333Z",
-    "execution_evidence": "automation_run_id=879756ff-0a70-832b-9c47-9bf873bb9e14; scheduled_for=2026-11-08T13:00:37Z; started_at=2026-11-08T13:33:33.502570Z; recorded_status_at_capture=in_progress; main_head=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30"
+    "trace_id": "TRC-ECO-BRAIN-DV-20261108T134258Z",
+    "execution_evidence": "automation_run_id=879756ff-0a70-832b-9c47-9bf873bb9e14; scheduled_for=2026-11-08T13:00:37Z; latest_last_run_started_at=2026-11-08T13:42:58.652994Z; audit_observed_at=2026-11-08T13:43:23Z; recorded_status_at_capture=in_progress; main_head=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30"
   },
   "repo_state": {
     "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
@@ -31,21 +31,60 @@
       "merged": false,
       "head_commit": "729ad54e5436504a3109145512b32ac8596663f0",
       "branch": "audit/daily-verification-20261107",
-      "base": "main"
+      "base": "main",
+      "head_commit_at_prior_evidence_capture": "729ad54e5436504a3109145512b32ac8596663f0",
+      "head_commit_before_metadata_correction": "d031ec536b628c6316ad2a24440b012d226423c3"
     },
-    "daily_verification_evidence_for_2026_11_08": "Absent at audit start; this record is being added to the existing isolated Daily Verification PR #16 branch."
+    "daily_verification_evidence_for_2026_11_08": "Existing record corrected to the latest read-only platform last_run metadata; earlier metadata capture retained in previous_metadata_capture."
   },
   "execution": {
     "recorded_status": "in_progress",
     "latest_result_run_id": "0cf59d9b-130c-8325-a662-2473ea1be24a",
     "latest_result_created_at": "2026-11-07T13:50:07.704836Z",
     "latest_result_note": "The latest published result belongs to the 2026-11-07 run, not the current 2026-11-08 run. No prior-day output is attributed to this execution.",
-    "evidence_interpretation": "The current platform execution was still in_progress at capture. This record preserves that observed state and does not claim platform completion."
+    "evidence_interpretation": "The latest platform last_run remains in_progress at capture. Its started_at is later than the earlier capture for the same run ID; this record uses the latest metadata and preserves the earlier capture for provenance. The latest published result belongs to the 2026-11-07 run and is not attributed to this execution.",
+    "last_run_started_at": "2026-11-08T13:42:58.652994Z",
+    "audit_observed_at": "2026-11-08T13:43:23Z",
+    "previous_metadata_capture_started_at": "2026-11-08T13:33:33.502570Z"
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or current status is inferred.",
-  "result": "AUTOMATION_RUN_IN_PROGRESS_AT_CAPTURE; EVIDENCE_RECORDED; EXISTING_VERIFIER_ACCEPTS_PERSISTED_EVIDENCE; CI_RUN_88_SUCCESS; FINAL_RECORD_COMMIT_CI_PENDING",
+  "result": "AUTOMATION_RUN_IN_PROGRESS_AT_LATEST_CAPTURE; EVIDENCE_METADATA_CORRECTED_TO_LATEST_PLATFORM_RUN; RUN_89_SUCCESS_ON_PREVIOUS_COMMIT; POST_UPDATE_COMMIT_CI_PENDING",
   "ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42486073778,
+    "run_number": 89,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42486073778",
+    "job_id": 128748104118,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "commit_validated": "d031ec536b628c6316ad2a24440b012d226423c3",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "12 passed in 0.06s",
+    "artifacts": [],
+    "note": "Run 89 is the post-commit CI for the prior branch head d031ec536b628c6316ad2a24440b012d226423c3. It does not validate this metadata-correction commit; a new post-commit CI is required."
+  },
+  "perimeter": {
+    "main_modified": false,
+    "architecture_changed": false,
+    "workflow_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_automations_modified": false,
+    "automation_schedule_or_prompt_modified": false
+  },
+  "previous_metadata_capture": {
+    "started_at": "2026-11-08T13:33:33.502570Z",
+    "timestamp": "2026-11-08T13:33:33.502570Z",
+    "trace_id": "TRC-ECO-BRAIN-DV-20261108T133333Z",
+    "recorded_status": "in_progress",
+    "captured_in_existing_pr_branch": true,
+    "note": "Earlier platform metadata capture for the same automation_run_id; retained for provenance. The latest read-only peek now reports a later started_at for this run ID."
+  },
+  "audit_observed_at": "2026-11-08T13:43:23Z",
+  "previous_ci_validation": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 42485912988,
     "run_number": 88,
@@ -59,14 +98,8 @@
     "artifacts": [],
     "note": "Run 88 validates the 2026-11-08 evidence record and its dedicated verifier test on commit 576e78dbf7335ed92c77ba27a7188af5cbf1b0e0. This CI metadata update creates a new final evidence-record commit; its post-commit CI will be checked and recorded in PR #16."
   },
-  "perimeter": {
-    "main_modified": false,
-    "architecture_changed": false,
-    "workflow_changed": false,
-    "eco_continuity_001_modified": false,
-    "eco_cel_modified": false,
-    "eco_ship_modified": false,
-    "other_automations_modified": false,
-    "automation_schedule_or_prompt_modified": false
+  "post_commit_ci_validation": {
+    "status": "pending",
+    "note": "Awaiting the GitHub Actions run triggered by this evidence-record correction."
   }
 }
