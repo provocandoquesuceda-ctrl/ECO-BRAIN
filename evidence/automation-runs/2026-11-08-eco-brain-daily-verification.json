@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.2",
+  "automation_name": "ECO-BRAIN Daily Verification",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": "879756ff-0a70-832b-9c47-9bf873bb9e14",
+  "automation_run_status_at_capture": "in_progress",
+  "scheduled_for": "2026-11-08T13:00:37Z",
+  "started_at": "2026-11-08T13:33:33.502570Z",
+  "completed_at": null,
+  "timestamp": "2026-11-08T13:33:33.502570Z",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261108T133333Z",
+  "trace_id_origin": "Audit-generated from the exact platform started_at; the automation platform does not expose a separate native trace_id.",
+  "capacidad_verificada": "ECO-BRAIN Daily Verification: independent inspection of the observed main commit, the scheduled automation run metadata, existing PR/CI evidence, and persistence of this daily audit record. This does not execute or certify ECO-CEL.",
+  "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "observed_branch": "main",
+  "verification_record": {
+    "automation_name": "ECO-BRAIN Daily Verification",
+    "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "observed_status": "in_progress",
+    "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+    "trace_id": "TRC-ECO-BRAIN-DV-20261108T133333Z",
+    "execution_evidence": "automation_run_id=879756ff-0a70-832b-9c47-9bf873bb9e14; scheduled_for=2026-11-08T13:00:37Z; started_at=2026-11-08T13:33:33.502570Z; recorded_status_at_capture=in_progress; main_head=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30"
+  },
+  "repo_state": {
+    "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "mission_control_pr_13": "merged",
+    "daily_verification_pr_16": {
+      "number": 16,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head_commit": "729ad54e5436504a3109145512b32ac8596663f0",
+      "branch": "audit/daily-verification-20261107",
+      "base": "main"
+    },
+    "daily_verification_evidence_for_2026_11_08": "Absent at audit start; this record is being added to the existing isolated Daily Verification PR #16 branch."
+  },
+  "execution": {
+    "recorded_status": "in_progress",
+    "latest_result_run_id": "0cf59d9b-130c-8325-a662-2473ea1be24a",
+    "latest_result_created_at": "2026-11-07T13:50:07.704836Z",
+    "latest_result_note": "The latest published result belongs to the 2026-11-07 run, not the current 2026-11-08 run. No prior-day output is attributed to this execution.",
+    "evidence_interpretation": "The current platform execution was still in_progress at capture. This record preserves that observed state and does not claim platform completion."
+  },
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or current status is inferred.",
+  "result": "AUTOMATION_RUN_IN_PROGRESS_AT_CAPTURE; DAILY_EVIDENCE_RECORDED; POST_COMMIT_CI_PENDING",
+  "ci_validation": {
+    "status": "PENDING_POST_COMMIT",
+    "note": "No CI success is claimed at record creation. The existing verifier test will be extended to validate this exact persisted JSON; the resulting post-commit workflow will be checked and recorded."
+  },
+  "perimeter": {
+    "main_modified": false,
+    "architecture_changed": false,
+    "workflow_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_automations_modified": false,
+    "automation_schedule_or_prompt_modified": false
+  }
+}
