@@ -80,3 +80,21 @@ def test_daily_verification_evidence_passes_existing_verifier():
         evidence["verification_record"]["eco_cel_status"]
         == "NOT_REVALIDATED_IN_THIS_AUDIT"
     )
+
+
+
+def test_daily_verification_20261108_evidence_passes_existing_verifier():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-08-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["verification_record"]["trace_id"] == evidence["trace_id"]
+    assert (
+        evidence["verification_record"]["eco_cel_status"]
+        == "NOT_REVALIDATED_IN_THIS_AUDIT"
+    )
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
