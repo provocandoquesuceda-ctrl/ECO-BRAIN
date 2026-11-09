@@ -62,8 +62,22 @@
     "artifacts": [],
     "note": "Run 97 validates the preceding PR #16 branch head, not this 2026-11-09 evidence commit. A new post-commit CI run is required."
   },
-  "result": "EVIDENCE_CAPTURED; POST_COMMIT_CI_PENDING; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE",
-  "post_commit_ci_validation": null,
+  "result": "EVIDENCE_CAPTURED; INITIAL_POST_COMMIT_CI_SUCCESS; FINAL_ANNOTATION_CI_PENDING; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE",
+  "post_commit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42626479747,
+    "run_number": 98,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42626479747",
+    "job_id": 129191461656,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "commit_validated": "e01b22f566815360a9288a121b46c779bce6d34e",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "13 passed in 0.08s",
+    "artifacts": [],
+    "note": "Run 98 is the post-commit CI for the initial 2026-11-09 evidence-record commit. This metadata annotation creates a new commit; its own post-commit CI will be independently checked and recorded in the PR conversation."
+  },
   "perimeter": {
     "main_modified": false,
     "architecture_changed": false,
@@ -73,5 +87,6 @@
     "eco_ship_modified": false,
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false
-  }
+  },
+  "initial_evidence_commit": "e01b22f566815360a9288a121b46c779bce6d34e"
 }
