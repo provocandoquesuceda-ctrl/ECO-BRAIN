@@ -53,7 +53,7 @@
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed or modified. No live ECO-CEL integration or current status is inferred.",
-  "result": "AUTOMATION_RUN_COMPLETED_AFTER_HISTORICAL_CAPTURE; EVIDENCE_RECONCILED; CI_RUN_94_SUCCESS; FINAL_CI_PENDING",
+  "result": "AUTOMATION_RUN_COMPLETED_AFTER_HISTORICAL_CAPTURE; EVIDENCE_RECONCILED; CI_RUN_95_SUCCESS; FINAL_COMMIT_CI_TO_BE_RECORDED_IN_PR16",
   "ci_validation": {
     "workflow": "ECO-BRAIN Verification",
     "workflow_run_id": 42486073778,
@@ -140,5 +140,20 @@
     "test_result": "13 passed in 0.08s",
     "artifacts": [],
     "note": "Run 94 validates the platform-completion reconciliation commit. The following CI run will validate this CI-metadata commit and will be recorded in the PR description."
+  },
+  "final_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42623849551,
+    "run_number": 95,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42623849551",
+    "job_id": 129182462226,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "commit_validated": "3d05728efbd6852f997619bc745302379c6c228b",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "13 passed in 0.05s",
+    "artifacts": [],
+    "note": "Run 95 is the post-commit CI for the final platform-status reconciliation and evidence metadata commit. Its result is also recorded in PR #16. The JSON commit created by this annotation will receive its own CI run, which is the final run to be recorded in the PR description."
   }
 }
