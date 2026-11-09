@@ -54,7 +54,7 @@
       "core/automation_verification.py",
       "tests/test_automation_verification.py"
     ],
-    "reason": "The existing verifier incorrectly required eco_cel_status == cycle_verified, preventing an honest Daily Verification record when ECO-CEL was not revalidated. It now validates that the status is explicit and non-empty while preserving its exact value. The persisted evidence JSON is passed through the existing verifier by an automated test.",
+    "reason": "The existing verifier previously required eco_cel_status == cycle_verified. The isolated correction now accepts only the explicit values cycle_verified and NOT_REVALIDATED_IN_THIS_AUDIT, rejecting blank and unknown values. The persisted evidence JSON is exercised by an automated test.",
     "architecture_changed": false,
     "workflow_changed": false
   },
