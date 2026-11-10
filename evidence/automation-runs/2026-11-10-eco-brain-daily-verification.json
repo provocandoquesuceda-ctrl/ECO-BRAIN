@@ -43,7 +43,8 @@
     "latest_result_completed_at": "2026-11-09T13:35:48.563764Z",
     "latest_result_note": "The latest published result belongs to the 2026-11-09 run, not the current 2026-11-10 run. No prior-day output is attributed to this execution.",
     "audit_observed_at": "2026-11-10T13:10:27.159941Z",
-    "evidence_interpretation": "The current 2026-11-10 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten."
+    "evidence_interpretation": "The current 2026-11-10 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten.",
+    "final_recheck_note": "The historical capture fields remain in_progress/completed_at=null. The later final_platform_recheck records the terminal platform status and timestamp for the identical automation_run_id."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
@@ -77,7 +78,7 @@
     "artifacts": [],
     "note": "Run 99 validates the pre-existing PR #16 branch head before adding this 2026-11-10 evidence record. It is not the post-commit CI for today's record."
   },
-  "result": "EVIDENCE_CAPTURED; INITIAL_POST_COMMIT_CI_SUCCESS; FINAL_ANNOTATION_CI_PENDING; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE",
+  "result": "EVIDENCE_CAPTURED; INITIAL_POST_COMMIT_CI_SUCCESS; FINAL_ANNOTATION_CI_SUCCESS; PLATFORM_RUN_COMPLETED_ON_READ_ONLY_RECHECK",
   "perimeter": {
     "this_run_added_only_daily_evidence_json": true,
     "main_modified": false,
@@ -107,5 +108,15 @@
     "test_result": "13 passed in 0.05s",
     "artifacts": [],
     "note": "Run 100 is the post-commit CI for the initial 2026-11-10 evidence-record commit. This CI metadata annotation creates a new commit; the new commit will receive its own post-commit CI, which will be independently checked and recorded in the PR conversation."
+  },
+  "final_platform_recheck": {
+    "rechecked_at": "2026-11-10T13:45:11-04:00",
+    "automation_run_id": "801a7663-25bc-8324-ac34-9229a11dd3e9",
+    "scheduled_for": "2026-11-10T13:00:37Z",
+    "started_at": "2026-11-10T13:10:27.159941Z",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-10T13:13:23.073530Z",
+    "source": "Read-only automation peek; same last_run.id as the historical in_progress capture.",
+    "interpretation": "The original capture remains unchanged. This subsequent read-only observation confirms that the same platform run reached its terminal completed state."
   }
 }
