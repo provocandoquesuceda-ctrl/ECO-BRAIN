@@ -77,7 +77,7 @@
     "artifacts": [],
     "note": "Run 99 validates the pre-existing PR #16 branch head before adding this 2026-11-10 evidence record. It is not the post-commit CI for today's record."
   },
-  "result": "EVIDENCE_CAPTURED; INITIAL_POST_COMMIT_CI_PENDING; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE",
+  "result": "EVIDENCE_CAPTURED; INITIAL_POST_COMMIT_CI_SUCCESS; FINAL_ANNOTATION_CI_PENDING; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE",
   "perimeter": {
     "this_run_added_only_daily_evidence_json": true,
     "main_modified": false,
@@ -91,5 +91,21 @@
     "automation_schedule_or_prompt_modified": false,
     "note": "The existing PR #16 already contains a previously isolated verifier correction and tests; this daily action adds only the 2026-11-10 evidence JSON. PR #16 remains draft and requires human review before any merge."
   },
-  "initial_evidence_commit_pending": true
+  "initial_evidence_commit_pending": false,
+  "initial_evidence_commit": "2989e5bb3f22b39c159a764066a47a5896da68ad",
+  "post_commit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 42822282111,
+    "run_number": 100,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/42822282111",
+    "job_id": 129850559589,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "commit_validated": "2989e5bb3f22b39c159a764066a47a5896da68ad",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "13 passed in 0.05s",
+    "artifacts": [],
+    "note": "Run 100 is the post-commit CI for the initial 2026-11-10 evidence-record commit. This CI metadata annotation creates a new commit; the new commit will receive its own post-commit CI, which will be independently checked and recorded in the PR conversation."
+  }
 }
