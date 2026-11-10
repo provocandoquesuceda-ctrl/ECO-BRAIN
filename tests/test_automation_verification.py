@@ -111,3 +111,23 @@ def test_daily_verification_20261108_evidence_passes_existing_verifier():
         == "NOT_REVALIDATED_IN_THIS_AUDIT"
     )
     assert evidence["verification_record"]["observed_status"] == "in_progress"
+
+
+
+def test_daily_verification_20261110_evidence_preserves_capture_and_terminal_recheck():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-10-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_run_status_at_capture"] == "in_progress"
+    assert evidence["completed_at"] is None
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
+
+    final_recheck = evidence["final_platform_recheck"]
+    assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
+    assert final_recheck["recorded_status"] == "completed"
+    assert final_recheck["completed_at"] == "2026-11-10T13:13:23.073530Z"
