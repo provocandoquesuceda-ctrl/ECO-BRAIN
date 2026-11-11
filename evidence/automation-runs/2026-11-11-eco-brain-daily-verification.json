@@ -93,5 +93,17 @@
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false,
     "note": "This action adds only the 2026-11-11 evidence JSON to the existing isolated draft PR branch. The branch already contains earlier audit records and a previously isolated verifier correction with tests; those earlier changes remain subject to human review. No merge is performed."
-  }
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "automation_run_id": "ad87ab28-b754-832a-8519-399a34af04ec",
+    "recorded_status": "completed",
+    "started_at": "2026-11-11T13:13:29.681666Z",
+    "completed_at": "2026-11-11T13:16:54.063481Z",
+    "rechecked_at": "2026-11-11T09:35:43-04:00",
+    "source": "Read-only automation platform peek; last_run.id matches the captured automation_run_id.",
+    "historical_capture_preserved": true,
+    "note": "The original observation remains automation_run_status_at_capture=in_progress and completed_at=null. This separate terminal observation closes the same run; it does not rewrite the historical capture or infer completion from latest_result."
+  },
+  "final_result": "PLATFORM_RUN_COMPLETED_ON_READ_ONLY_RECHECK; HISTORICAL_CAPTURE_PRESERVED; DAILY_EVIDENCE_RECONCILED; PRIOR_POST_COMMIT_CI_RUN_103_SUCCESS"
 }
