@@ -128,6 +128,7 @@ def test_daily_verification_20261110_evidence_preserves_capture_and_terminal_rec
     assert evidence["verification_record"]["observed_status"] == "in_progress"
 
     final_recheck = evidence["final_platform_recheck"]
+    assert evidence["automation_run_id"] == "aa3d5d5a-2fe8-8330-a04e-339ea33930ca"
     assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
     assert final_recheck["recorded_status"] == "completed"
     assert final_recheck["completed_at"] == "2026-11-10T13:13:23.073530Z"
