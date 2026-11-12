@@ -58,7 +58,7 @@
     "latest_result_note": "The latest published result belongs to the 2026-11-11 run, not the current 2026-11-12 run. No prior-day output is attributed to this execution.",
     "audit_observed_at": "2026-11-12T13:09:08.194555Z",
     "evidence_interpretation": "The current 2026-11-12 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten.",
-    "final_recheck_note": "If a later read-only platform recheck confirms completion for the identical automation_run_id, record it separately without rewriting this historical capture."
+    "final_recheck_note": "A later read-only platform peek returned the same automation_run_id with recorded_status=completed and the exact completed_at. The original capture is preserved unchanged under automation_run_status_at_capture and completed_at."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
@@ -82,13 +82,21 @@
   "workflow_configuration": {
     "path": ".github/workflows/tests.yml",
     "observed_on": "main",
-    "push_branches": ["main", "eco-cel/**"],
+    "push_branches": [
+      "main",
+      "eco-cel/**"
+    ],
     "pull_request_trigger": true,
-    "steps": ["actions/checkout@v4", "actions/setup-python@v5 (Python 3.13)", "python -m pip install --upgrade pip pytest", "PYTHONPATH=. pytest -q"],
+    "steps": [
+      "actions/checkout@v4",
+      "actions/setup-python@v5 (Python 3.13)",
+      "python -m pip install --upgrade pip pytest",
+      "PYTHONPATH=. pytest -q"
+    ],
     "artifact_upload_step_present": false,
     "note": "The current workflow file contains no artifact upload step. This audit does not infer that artifacts should exist."
   },
-  "result": "INDEPENDENT_CAPTURE_RECORDED; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE; PREVIOUS_PR_CI_SUCCESS; POST_COMMIT_CI_PENDING",
+  "result": "INDEPENDENT_CAPTURE_RECORDED; PLATFORM_RUN_TERMINAL_STATUS_CONFIRMED_BY_READ_ONLY_RECHECK; POST_COMMIT_CI_PENDING",
   "perimeter": {
     "this_run_adds_only_daily_evidence_json": true,
     "main_modified": false,
@@ -101,5 +109,12 @@
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false,
     "note": "This action adds only the 2026-11-12 evidence JSON to the existing isolated draft PR #16 branch. The branch already contains earlier audit records and a previously isolated verifier correction with tests; those earlier changes remain subject to human review. No merge is performed."
+  },
+  "final_platform_recheck": {
+    "automation_run_id": "aa3d5d5a-2fe8-8330-a4e-339ea33930ca",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-12T13:15:24.989055Z",
+    "source": "Read-only peek of ECO-BRAIN Daily Verification automation 6a9eb5753ed08191819558c94fab138a after the historical evidence capture.",
+    "reconciliation_note": "The platform returned the same automation_run_id as the historical capture. The original automation_run_status_at_capture=in_progress and completed_at=null remain unchanged."
   }
 }
