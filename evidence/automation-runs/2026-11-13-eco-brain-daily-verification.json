@@ -49,7 +49,8 @@
         ]
       },
       "daily_verification_evidence_for_2026_11_13": "Not present on main or the existing isolated PR #16 branch at capture; this JSON is being recorded on that existing draft branch."
-    }
+    },
+    "daily_verification_evidence_for_2026_11_13": "Persisted on the existing isolated PR #16 branch; initial in_progress capture preserved and later completed status reconciled."
   },
   "execution": {
     "recorded_status": "in_progress",
@@ -58,7 +59,10 @@
     "latest_result_completed_at": "2026-11-12T13:15:24.989055Z",
     "latest_result_note": "The latest published result belongs to the 2026-11-12 run, not the current 2026-11-13 run. No prior-day output is attributed to this execution.",
     "audit_observed_at": "2026-11-13T13:13:24.679789Z",
-    "evidence_interpretation": "The current 2026-11-13 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten."
+    "evidence_interpretation": "The current 2026-11-13 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten.",
+    "final_platform_status": "completed",
+    "final_platform_completed_at": "2026-11-13T13:20:02.364350Z",
+    "final_platform_recheck_source": "Read-only automation platform metadata for the same run ID."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
@@ -96,7 +100,7 @@
     "artifact_upload_step_present": false,
     "note": "The current workflow file contains no artifact upload step. This audit does not infer that artifacts should exist."
   },
-  "result": "INDEPENDENT_CAPTURE_RECORDED; PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE; POST_COMMIT_CI_PENDING",
+  "result": "PLATFORM_RUN_COMPLETED; HISTORICAL_IN_PROGRESS_CAPTURE_PRESERVED; FINAL_STATUS_RECONCILED; POST_RECHECK_CI_PENDING",
   "perimeter": {
     "this_run_adds_only_daily_evidence_json": true,
     "main_modified": false,
@@ -109,5 +113,15 @@
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false,
     "note": "This action adds only the 2026-11-13 evidence JSON to the existing isolated draft PR #16 branch. The branch already contains earlier audit records and a previously isolated verifier correction with tests; those earlier changes remain subject to human review. No merge is performed."
+  },
+  "final_platform_recheck": {
+    "automation_run_id": "575c52c1-700c-8322-9a9e-b5ffc5938226",
+    "recorded_status": "completed",
+    "scheduled_for": "2026-11-13T13:00:37Z",
+    "started_at": "2026-11-13T13:13:24.679789Z",
+    "completed_at": "2026-11-13T13:20:02.364350Z",
+    "rechecked_at": "2026-11-13T13:59:42Z",
+    "source": "Read-only automation platform run metadata; last_run.id and latest_result.run_id both match this record's automation_run_id.",
+    "interpretation": "The original evidence capture occurred while this run was still in progress. The later platform metadata confirms that the same run reached completed. The original capture and null completed_at remain unchanged."
   }
 }
