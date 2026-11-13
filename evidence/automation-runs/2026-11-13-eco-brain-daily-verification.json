@@ -100,7 +100,7 @@
     "artifact_upload_step_present": false,
     "note": "The current workflow file contains no artifact upload step. This audit does not infer that artifacts should exist."
   },
-  "result": "PLATFORM_RUN_COMPLETED; HISTORICAL_IN_PROGRESS_CAPTURE_PRESERVED; FINAL_STATUS_RECONCILED; POST_RECHECK_CI_PENDING",
+  "result": "PLATFORM_RUN_COMPLETED; HISTORICAL_CAPTURE_PRESERVED; FINAL_STATUS_RECONCILED; CI_RUN_112_SUCCESS; FINAL_EVIDENCE_COMMIT_CI_PENDING",
   "perimeter": {
     "this_run_adds_only_daily_evidence_json": true,
     "main_modified": false,
@@ -123,5 +123,22 @@
     "rechecked_at": "2026-11-13T13:59:42Z",
     "source": "Read-only automation platform run metadata; last_run.id and latest_result.run_id both match this record's automation_run_id.",
     "interpretation": "The original evidence capture occurred while this run was still in progress. The later platform metadata confirms that the same run reached completed. The original capture and null completed_at remain unchanged."
+  },
+  "post_recheck_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 43438895890,
+    "run_number": 112,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/43438895890",
+    "job_id": 131931029856,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "pull_request_number": 16,
+    "pull_request_head_commit": "ef366d5168cb11c4d553dc2523d229dbe996dd15",
+    "checked_out_pull_request_merge_commit": "68b52ca",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "16 passed in 0.07s",
+    "artifacts": [],
+    "note": "Run 112 validated the final-platform-reconciliation record and its regression test. The runner checked out the synthetic PR merge commit combining this PR head with main. This CI record is itself being persisted in the evidence file; the subsequent run for that final metadata commit is documented in the PR conversation."
   }
 }
