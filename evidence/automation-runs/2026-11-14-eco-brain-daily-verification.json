@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.2",
+  "automation_name": "ECO-BRAIN Daily Verification",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": "aedeb923-4478-8328-baec-3fdb2fd11b68",
+  "automation_run_status_at_capture": "in_progress",
+  "scheduled_for": "2026-11-14T13:00:37Z",
+  "started_at": "2026-11-14T13:41:33.011934Z",
+  "completed_at": null,
+  "timestamp": "2026-11-14T13:41:33.011934Z",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261114T134133Z",
+  "trace_id_origin": "Audit-generated from the exact platform last_run.started_at (2026-11-14T13:41:33.011934Z); the automation platform does not expose a separate native trace_id.",
+  "capacidad_verificada": "ECO-BRAIN Daily Verification: independent inspection of the current main commit, scheduled automation execution metadata, existing Daily Verification PR and CI evidence, workflow configuration, and persistence of this daily audit record. This does not execute or certify ECO-CEL.",
+  "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "observed_branch": "main",
+  "verification_record": {
+    "automation_name": "ECO-BRAIN Daily Verification",
+    "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "observed_status": "in_progress",
+    "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+    "trace_id": "TRC-ECO-BRAIN-DV-20261114T134133Z",
+    "execution_evidence": "automation_run_id=aedeb923-4478-8328-baec-3fdb2fd11b68; scheduled_for=2026-11-14T13:00:37Z; started_at=2026-11-14T13:41:33.011934Z; completed_at=null at capture; main_head=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30"
+  },
+  "repo_state": {
+    "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "daily_verification_pr_16": {
+      "number": 16,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "branch": "audit/daily-verification-20261107",
+      "base": "main",
+      "base_sha": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+      "head_before_2026_11_14_record": "4e7f8e29d3fe4a5d36eb73d4a67ac2e53763472b",
+      "compare_to_main_before_record": {
+        "status": "ahead",
+        "ahead_by": 37,
+        "behind_by": 0,
+        "changed_files": 9
+      },
+      "daily_verification_evidence_for_2026_11_14": "Not present on main or the existing isolated PR #16 branch at capture; this JSON is being recorded on that existing draft branch."
+    },
+    "mission_control_pr_13": "merged",
+    "documentation_pr_15": {
+      "number": 15,
+      "state": "open",
+      "draft": true,
+      "merged": false
+    },
+    "daily_verification_pr_14": {
+      "number": 14,
+      "state": "open",
+      "draft": true,
+      "merged": false
+    }
+  },
+  "execution": {
+    "recorded_status": "in_progress",
+    "latest_result_run_id": "575c52c1-700c-8322-9a9e-b5ffc5938226",
+    "latest_result_created_at": "2026-11-13T13:20:01.975808Z",
+    "latest_result_completed_at": "2026-11-13T13:20:02.364350Z",
+    "latest_result_note": "The latest published result belongs to the 2026-11-13 run, not the current 2026-11-14 run. No prior-day output is attributed to this execution.",
+    "audit_observed_at": "2026-11-14T13:41:33.011934Z",
+    "evidence_interpretation": "The current 2026-11-14 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten."
+  },
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "eco_cel_scope_note": "ECO-CEL was not executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
+  "previous_pr_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 43439405838,
+    "run_number": 113,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/43439405838",
+    "job_id": 131932788377,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "pull_request_number": 16,
+    "pull_request_head_commit": "4e7f8e29d3fe4a5d36eb73d4a67ac2e53763472b",
+    "checked_out_pull_request_merge_commit": "1eaa88f534c4a8f2f66bf1433ba74db0159afb75",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "16 passed in 0.08s",
+    "artifacts": [],
+    "note": "Run 113 validates the existing PR #16 head before adding the 2026-11-14 evidence record. It is baseline CI, not post-commit CI for this record."
+  },
+  "workflow_configuration": {
+    "path": ".github/workflows/tests.yml",
+    "observed_on": "main",
+    "push_branches": [
+      "main",
+      "eco-cel/**"
+    ],
+    "pull_request_trigger": true,
+    "steps": [
+      "actions/checkout@v4",
+      "actions/setup-python@v5 (Python 3.13)",
+      "python -m pip install --upgrade pip pytest",
+      "PYTHONPATH=. pytest -q"
+    ],
+    "artifact_upload_step_present": false,
+    "note": "The existing workflow contains no artifact-upload step. No artifacts are inferred."
+  },
+  "result": "CURRENT_PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE; EVIDENCE_RECORDED; POST_COMMIT_CI_PENDING",
+  "perimeter": {
+    "this_run_adds_only_daily_evidence_json": true,
+    "main_modified": false,
+    "functional_code_modified": false,
+    "tests_modified": false,
+    "architecture_changed": false,
+    "workflow_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_automations_modified": false,
+    "automation_schedule_or_prompt_modified": false,
+    "note": "This action adds only the 2026-11-14 evidence JSON to the existing isolated draft PR #16 branch. No merge is performed."
+  }
+}
