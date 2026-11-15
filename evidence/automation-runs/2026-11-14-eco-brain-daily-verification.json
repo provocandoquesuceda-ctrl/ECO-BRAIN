@@ -113,5 +113,13 @@
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false,
     "note": "This action adds only the 2026-11-14 evidence JSON to the existing isolated draft PR #16 branch. No merge is performed."
+  },
+  "final_platform_recheck": {
+    "automation_run_id": "aedeb923-4478-8328-baec-3fdb2fd11b68",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-14T13:45:46.633921Z",
+    "rechecked_at": "2026-11-15T13:34:46Z",
+    "recheck_source": "Read-only ECO-BRAIN Daily Verification automation execution metadata; exact last_run.id matched the captured automation_run_id.",
+    "note": "The original capture remains in_progress with completed_at=null. This later observation records the terminal completion of the same run without rewriting its historical capture."
   }
 }
