@@ -169,3 +169,22 @@ def test_daily_verification_20261113_evidence_preserves_capture_and_terminal_rec
     assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
     assert final_recheck["recorded_status"] == "completed"
     assert final_recheck["completed_at"] == "2026-11-13T13:20:02.364350Z"
+
+def test_daily_verification_20261114_evidence_preserves_capture_and_terminal_recheck():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-14-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_run_status_at_capture"] == "in_progress"
+    assert evidence["completed_at"] is None
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
+
+    final_recheck = evidence["final_platform_recheck"]
+    assert evidence["automation_run_id"] == "aedeb923-4478-8328-baec-3fdb2fd11b68"
+    assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
+    assert final_recheck["recorded_status"] == "completed"
+    assert final_recheck["completed_at"] == "2026-11-14T13:45:46.633921Z"
