@@ -61,7 +61,10 @@
     "latest_result_completed_at": "2026-11-14T13:45:46.633921Z",
     "latest_result_note": "The latest published result belongs to the 2026-11-14 run, not the current 2026-11-15 run. No prior-day output is attributed to this execution.",
     "audit_observed_at": "2026-11-15T13:38:46.173487Z",
-    "evidence_interpretation": "The current 2026-11-15 execution was observed as in_progress. Its terminal status and completed_at were not available at capture; this historical capture is not rewritten."
+    "evidence_interpretation": "The original capture remains in_progress with completed_at=null as observed at capture time. A later read-only platform lookup confirmed that this exact run subsequently completed at 2026-11-15T13:42:41.086810Z. Both observations are preserved separately.",
+    "terminal_status": "completed",
+    "terminal_completed_at": "2026-11-15T13:42:41.086810Z",
+    "terminal_observation_source": "Read-only platform status lookup of the same automation run ID."
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
@@ -85,7 +88,10 @@
   "workflow_configuration": {
     "path": ".github/workflows/tests.yml",
     "observed_on": "main",
-    "push_branches": ["main", "eco-cel/**"],
+    "push_branches": [
+      "main",
+      "eco-cel/**"
+    ],
     "pull_request_trigger": true,
     "steps": [
       "actions/checkout@v4",
@@ -96,7 +102,7 @@
     "artifact_upload_step_present": false,
     "note": "The existing workflow contains no artifact-upload step. No artifacts are inferred."
   },
-  "result": "CURRENT_PLATFORM_RUN_IN_PROGRESS_AT_CAPTURE; EVIDENCE_RECORDED; POST_COMMIT_CI_PENDING",
+  "result": "PLATFORM_RUN_COMPLETED_AFTER_HISTORICAL_CAPTURE; EVIDENCE_RECONCILED; POST_COMMIT_CI_PENDING",
   "perimeter": {
     "this_run_adds_only_daily_evidence_json": true,
     "main_modified": false,
@@ -110,5 +116,12 @@
     "other_automations_modified": false,
     "automation_schedule_or_prompt_modified": false,
     "note": "This action adds only the 2026-11-15 evidence JSON to the existing isolated draft PR #16 branch. No merge is performed."
+  },
+  "final_platform_recheck": {
+    "automation_run_id": "93b0fa5a-c2c4-832e-bd36-bd44c82e0384",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-15T13:42:41.086810Z",
+    "source": "Read-only automation platform status lookup for automation_id 6a9eb5753ed08191819558c94fab138a; exact run ID matched the historical capture.",
+    "historical_capture_preserved": true
   }
 }
