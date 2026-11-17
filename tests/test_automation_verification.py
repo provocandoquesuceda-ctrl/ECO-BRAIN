@@ -208,7 +208,7 @@ def test_daily_verification_20261115_evidence_preserves_capture_and_terminal_rec
     assert final_recheck["completed_at"] == "2026-11-15T13:42:41.086810Z"
 
 
-def test_daily_verification_20261117_audit_record_preserves_missing_target_run():
+def test_daily_verification_20261117_audit_record_captures_target_run_after_initial_snapshot():
     evidence_path = (
         Path(__file__).resolve().parents[1]
         / "evidence/automation-runs/2026-11-17-eco-brain-daily-verification.json"
@@ -218,12 +218,21 @@ def test_daily_verification_20261117_audit_record_preserves_missing_target_run()
     validate_verification_record(evidence["verification_record"])
 
     assert evidence["automation_id"] == "6a9eb5753ed08191819558c94fab138a"
-    assert evidence["automation_run_id"] is None
-    assert evidence["automation_run_status_at_capture"] == "not_visible"
-    assert evidence["verification_record"]["observed_status"] == "scheduled_run_not_visible"
-    assert evidence["execution"]["target_platform_run"]["new_run_visible_for_2026_11_17"] is False
+    assert evidence["automation_run_id"] == "078ac166-af94-8326-87f4-c4520c64bf47"
+    assert evidence["automation_run_status_at_capture"] == "in_progress"
+    assert evidence["scheduled_for"] == "2026-11-17T13:00:37Z"
+    assert evidence["started_at"] == "2026-11-17T13:14:58.843348Z"
+    assert evidence["timestamp"] == evidence["started_at"]
+    assert evidence["completed_at"] is None
+    assert evidence["trace_id"] == "TRC-ECO-BRAIN-DV-20261117T131458Z"
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
     assert (
-        evidence["execution"]["audit_execution"]["automation_run_id"]
-        == "3abeb2ab-152c-8332-9d46-6da64599496b"
+        evidence["execution"]["current_daily_verification_run"]["automation_run_id"]
+        == evidence["automation_run_id"]
+    )
+    assert (
+        evidence["execution"]["initial_daily_sprint_observation"]["target_platform_observation"]
+        ["new_run_visible_for_2026_11_17"]
+        is False
     )
     assert evidence["eco_cel_status"] == "NOT_REVALIDATED_IN_THIS_AUDIT"
