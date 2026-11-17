@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.3",
+  "automation_name": "ECO-BRAIN Daily Verification",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": null,
+  "automation_run_status_at_capture": "not_visible",
+  "scheduled_for": "2026-11-17T13:00:37Z",
+  "started_at": null,
+  "completed_at": null,
+  "timestamp": "2026-11-17T13:04:21.284636Z",
+  "trace_id": "TRC-ECO-BRAIN-DV-AUDIT-20261117T130421Z",
+  "trace_id_origin": "Audit-generated from the exact started_at of the ECO-BRAIN Daily Sprint run that performed this inspection. It is not a native ECO-BRAIN Daily Verification trace ID.",
+  "capacidad_verificada": "ECO-BRAIN Daily Verification: inspected its enabled schedule and platform run history; verified the current main commit, isolated PR #16 branch, existing evidence validator, latest PR CI job and artifact inventory. No new Daily Verification platform run was visible for 2026-11-17 at the audit timestamp. This record does not claim that the target automation executed or that ECO-CEL was revalidated.",
+  "commit_observado": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "observed_branch": "main",
+  "verification_record": {
+    "automation_name": "ECO-BRAIN Daily Verification",
+    "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "observed_status": "scheduled_run_not_visible",
+    "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+    "trace_id": "TRC-ECO-BRAIN-DV-AUDIT-20261117T130421Z",
+    "execution_evidence": "Audit execution: ECO-BRAIN Daily Sprint automation_id=6a9eb572391c81918b1213ce2c8add7a; automation_run_id=3abeb2ab-152c-8332-9d46-6da64599496b; started_at=2026-11-17T13:04:21.284636Z; recorded_status=in_progress at capture. Target Daily Verification automation_id=6a9eb5753ed08191819558c94fab138a; last visible target run_id=93b0fa5a-c2c4-832e-bd36-bd44c82e0384; recorded_status=completed; completed_at=2026-11-15T13:42:41.086810Z. Target schedule for 2026-11-17 was 2026-11-17T13:00:37Z, but no new target run_id was visible at audit time. A manual invocation returned an inline task prompt but exposed no native target run_id and did not update the target automation's last_run metadata. Main SHA=e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30. PR #16 head before this audit record=66157454433f619ea1748edbf70dbb951e21ec32. Existing PR CI run 118=success; job 133341938613; 17 passed; artifacts=0."
+  },
+  "repo_state": {
+    "main_head": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+    "mission_control_pr_13": "merged",
+    "daily_verification_pr_16": {
+      "number": 16,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "branch": "audit/daily-verification-20261107",
+      "base": "main",
+      "head_before_this_audit": "66157454433f619ea1748edbf70dbb951e21ec32",
+      "ahead_by_before_this_audit": 43,
+      "behind_by_before_this_audit": 0,
+      "changed_files_before_this_audit": 11,
+      "human_reviews": 0,
+      "review_threads": 0
+    }
+  },
+  "execution": {
+    "target_platform_run": {
+      "automation_id": "6a9eb5753ed08191819558c94fab138a",
+      "last_run_id": "93b0fa5a-c2c4-832e-bd36-bd44c82e0384",
+      "recorded_status": "completed",
+      "scheduled_for": "2026-11-15T13:00:37Z",
+      "started_at": "2026-11-15T13:38:46.173487Z",
+      "completed_at": "2026-11-15T13:42:41.086810Z",
+      "next_scheduled_for": "2026-11-17T13:00:37Z",
+      "new_run_visible_for_2026_11_17": false
+    },
+    "manual_invocation": {
+      "requested": true,
+      "response": "Ready to run in this conversation.",
+      "inline_prompt_returned": true,
+      "native_target_run_id_exposed": false,
+      "target_last_run_metadata_updated": false
+    },
+    "audit_execution": {
+      "automation_name": "ECO-BRAIN Daily Sprint",
+      "automation_id": "6a9eb572391c81918b1213ce2c8add7a",
+      "automation_run_id": "3abeb2ab-152c-8332-9d46-6da64599496b",
+      "scheduled_for": "2026-11-17T13:00:34Z",
+      "started_at": "2026-11-17T13:04:21.284636Z",
+      "recorded_status_at_capture": "in_progress",
+      "trace_id": "TRC-ECO-BRAIN-DV-AUDIT-20261117T130421Z"
+    }
+  },
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "eco_cel_scope_note": "ECO-CEL was not executed, configured, inspected, or modified. No live ECO-CEL integration or current status is inferred.",
+  "pre_audit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_run_id": 43879690239,
+    "run_number": 118,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/43879690239",
+    "job_id": 133341938613,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "pull_request_number": 16,
+    "pull_request_head_commit": "66157454433f619ea1748edbf70dbb951e21ec32",
+    "checked_out_pull_request_merge_commit": "9610059ad1366c896bb29bb886d8d599ddf45e1d",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "17 passed in 0.06s",
+    "artifacts": [],
+    "note": "This is baseline CI for the existing PR #16 head before the 2026-11-17 audit record and regression tests. It is not post-commit CI for this record."
+  },
+  "workflow_configuration": {
+    "path": ".github/workflows/tests.yml",
+    "pull_request_trigger": true,
+    "push_branches": [
+      "main",
+      "eco-cel/**"
+    ],
+    "steps": [
+      "actions/checkout@v4",
+      "actions/setup-python@v5 (Python 3.13)",
+      "python -m pip install --upgrade pip pytest",
+      "PYTHONPATH=. pytest -q"
+    ],
+    "artifact_upload_step_present": false
+  },
+  "result": "AUDIT_EXECUTED; DAILY_VERIFICATION_2026_11_17_PLATFORM_RUN_NOT_VISIBLE; NO_TARGET_RUN_CLAIMED; BASELINE_CI_SUCCESS",
+  "perimeter": {
+    "main_modified": false,
+    "functional_code_modified": false,
+    "architecture_changed": false,
+    "workflow_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_modified": false,
+    "eco_ship_modified": false,
+    "other_automations_modified": false,
+    "automation_schedule_or_prompt_modified": false,
+    "evidence_branch_only": true,
+    "no_merge": true
+  }
+}
