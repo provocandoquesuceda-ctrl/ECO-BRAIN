@@ -132,7 +132,7 @@
     ],
     "artifact_upload_step_present": false
   },
-  "result": "DAILY_VERIFICATION_RUN_CAPTURED_IN_PROGRESS; EVIDENCE_UPDATED; POST_COMMIT_CI_PENDING",
+  "result": "DAILY_VERIFICATION_RUN_CAPTURED_IN_PROGRESS; EVIDENCE_PERSISTED; CI_RUN_122_SUCCESS_AFTER_TEST_ONLY_RECONCILIATION; PLATFORM_TERMINAL_STATUS_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -145,5 +145,27 @@
     "automation_schedule_or_prompt_modified": false,
     "evidence_branch_only": true,
     "no_merge": true
+  },
+  "post_commit_ci_validation": {
+    "evidence_update_commit": "f7818483a002e0a546e25749af3bfb96eee51440",
+    "first_post_commit_run": {
+      "run_id": 44091249315,
+      "run_number": 121,
+      "conclusion": "failure",
+      "job_id": 134066615748,
+      "failure": "The pre-existing test asserted automation_run_id is None, but the scheduled target run had become visible. This was a stale test expectation, not a functional-code failure."
+    },
+    "test_only_reconciliation_commit": "71bb6bfecdcafbcbb6af38a977d799f20793ab49",
+    "second_post_commit_run": {
+      "run_id": 44091423980,
+      "run_number": 122,
+      "conclusion": "success",
+      "job_id": 134067210038,
+      "test_command": "PYTHONPATH=. pytest -q",
+      "test_result": "19 passed in 0.08s",
+      "checked_out_pr_merge_commit": "b5858aa",
+      "artifacts": 0
+    },
+    "note": "Run 122 validates the evidence update together with the narrow test-only reconciliation. A final CI run is triggered by this evidence metadata update and will be recorded in the PR audit comment."
   }
 }
