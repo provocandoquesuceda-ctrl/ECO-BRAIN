@@ -188,3 +188,42 @@ def test_daily_verification_20261114_evidence_preserves_capture_and_terminal_rec
     assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
     assert final_recheck["recorded_status"] == "completed"
     assert final_recheck["completed_at"] == "2026-11-14T13:45:46.633921Z"
+
+
+def test_daily_verification_20261115_evidence_preserves_capture_and_terminal_recheck():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-15-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_run_status_at_capture"] == "in_progress"
+    assert evidence["completed_at"] is None
+    final_recheck = evidence["final_platform_recheck"]
+    assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
+    assert evidence["automation_run_id"] == "93b0fa5a-c2c4-832e-bd36-bd44c82e0384"
+    assert final_recheck["recorded_status"] == "completed"
+    assert final_recheck["completed_at"] == "2026-11-15T13:42:41.086810Z"
+
+
+def test_daily_verification_20261117_audit_record_preserves_missing_target_run():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-17-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_id"] == "6a9eb5753ed08191819558c94fab138a"
+    assert evidence["automation_run_id"] is None
+    assert evidence["automation_run_status_at_capture"] == "not_visible"
+    assert evidence["verification_record"]["observed_status"] == "scheduled_run_not_visible"
+    assert evidence["execution"]["target_platform_run"]["new_run_visible_for_2026_11_17"] is False
+    assert (
+        evidence["execution"]["audit_execution"]["automation_run_id"]
+        == "3abeb2ab-152c-8332-9d46-6da64599496b"
+    )
+    assert evidence["eco_cel_status"] == "NOT_REVALIDATED_IN_THIS_AUDIT"
