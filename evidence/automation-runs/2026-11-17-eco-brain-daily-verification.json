@@ -132,7 +132,7 @@
     ],
     "artifact_upload_step_present": false
   },
-  "result": "DAILY_VERIFICATION_RUN_CAPTURED_IN_PROGRESS; EVIDENCE_PERSISTED; CI_RUN_122_SUCCESS_AFTER_TEST_ONLY_RECONCILIATION; PLATFORM_TERMINAL_STATUS_PENDING",
+  "result": "DAILY_VERIFICATION_RUN_CAPTURED_IN_PROGRESS; FINAL_PLATFORM_RECHECK_CONFIRMS_COMPLETED; EVIDENCE_RECONCILED; PRIOR_CI_RUN_123_SUCCESS; POST_RECONCILIATION_CI_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -166,6 +166,28 @@
       "checked_out_pr_merge_commit": "b5858aa",
       "artifacts": 0
     },
-    "note": "Run 122 validates the evidence update together with the narrow test-only reconciliation. A final CI run is triggered by this evidence metadata update and will be recorded in the PR audit comment."
+    "note": "Run 122 validates the evidence update together with the narrow test-only reconciliation. A final CI run is triggered by this evidence metadata update and will be recorded in the PR audit comment.",
+    "final_ci_run_before_terminal_reconciliation": {
+      "workflow_run_id": 44091714760,
+      "run_number": 123,
+      "status": "completed",
+      "conclusion": "success",
+      "validated_branch_head": "d654263510cbb9c7381ab7ba2ab751bd838f7a59",
+      "checked_out_pull_request_merge_commit": "5812080611c9914ef7647fb954da1c6790e40974",
+      "job_id": 134068244117,
+      "test_command": "PYTHONPATH=. pytest -q",
+      "test_result": "19 passed in 0.10s",
+      "artifacts": 0,
+      "note": "This run validates the pre-reconciliation PR head. A new post-reconciliation CI run is required for the commit created by the terminal-status update."
+    }
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "automation_run_id": "078ac166-af94-8326-87f4-c4520c64bf47",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-17T13:21:26.581772Z",
+    "observation_date": "2026-11-18",
+    "observation_method": "Read-only lookup of the automation's exact last_run metadata on 2026-11-18; automation_run_id and scheduled_for match the historical capture.",
+    "historical_capture_preserved": true
   }
 }
