@@ -67,7 +67,7 @@
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not executed, configured, inspected, or modified. No live ECO-CEL integration or current status is inferred.",
-  "result": "DAILY_VERIFICATION_RUN_CAPTURED_IN_PROGRESS; PRIOR_RUN_17_TERMINAL_STATUS_RECONCILED; BASELINE_CI_RUN_124_SUCCESS; POST_COMMIT_CI_PENDING",
+  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUN_125_SUCCESS; FINAL_RECORD_CI_PENDING; CURRENT_PLATFORM_RUN_CAPTURED_IN_PROGRESS",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -80,5 +80,18 @@
     "automation_schedule_or_prompt_modified": false,
     "evidence_branch_only": true,
     "no_merge": true
+  },
+  "post_commit_ci_validation": {
+    "evidence_commit": "42696801d3f039cf4630d16a1a675c7e11589786",
+    "workflow_run_id": 44313532310,
+    "run_number": 125,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_head_sha": "42696801d3f039cf4630d16a1a675c7e11589786",
+    "job_id": 134833531067,
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "19 passed in 0.09s",
+    "artifacts": 0,
+    "note": "Run 125 is the post-commit CI validation of the initial 2026-11-18 evidence record. This metadata update creates a new commit and requires its own post-commit CI validation."
   }
 }
