@@ -236,3 +236,29 @@ def test_daily_verification_20261117_audit_record_captures_target_run_after_init
         is False
     )
     assert evidence["eco_cel_status"] == "NOT_REVALIDATED_IN_THIS_AUDIT"
+
+
+
+def test_daily_verification_20261119_evidence_preserves_capture_and_terminal_recheck():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-19-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_id"] == "6a9eb5753ed08191819558c94fab138a"
+    assert evidence["automation_run_id"] == "87a02c07-2770-8332-931d-7efd70ca39f2"
+    assert evidence["automation_run_status_at_capture"] == "in_progress"
+    assert evidence["scheduled_for"] == "2026-11-19T13:00:37Z"
+    assert evidence["started_at"] == "2026-11-19T13:20:16.018367Z"
+    assert evidence["completed_at"] is None
+    assert evidence["timestamp"] == evidence["started_at"]
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
+
+    final_recheck = evidence["final_platform_recheck"]
+    assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
+    assert final_recheck["recorded_status"] == "completed"
+    assert final_recheck["completed_at"] == "2026-11-19T13:24:20.304205Z"
+    assert final_recheck["historical_capture_preserved"] is True
