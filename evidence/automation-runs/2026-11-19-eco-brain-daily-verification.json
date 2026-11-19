@@ -62,7 +62,7 @@
   },
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured, or modified. No live ECO-CEL integration or current status is inferred.",
-  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUN_127_SUCCESS; FINAL_RECORD_CI_PENDING; CURRENT_PLATFORM_RUN_CAPTURED_IN_PROGRESS",
+  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; CURRENT_PLATFORM_RUN_COMPLETED; TERMINAL_STATUS_RECONCILED",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -90,5 +90,16 @@
     "job_steps": "All steps completed successfully.",
     "artifacts": 0,
     "note": "Run 127 is the post-commit CI validation of the initial 2026-11-19 evidence record. This CI metadata update creates a new commit and requires its own post-commit CI validation."
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "automation_run_id": "87a02c07-2770-8332-931d-7efd70ca39f2",
+    "scheduled_for": "2026-11-19T13:00:37Z",
+    "started_at": "2026-11-19T13:20:16.018367Z",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-19T13:24:20.304205Z",
+    "source": "Read-only recheck of the same automation's last_run metadata after the original evidence capture.",
+    "same_automation_run_id_confirmed": true,
+    "historical_capture_preserved": true
   }
 }
