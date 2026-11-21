@@ -74,7 +74,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRE_AUDIT_CI_RUN_132_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUN_133_SUCCESS; 20_TESTS_PASSED; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING; FINAL_RECORD_CI_PENDING",
+  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUNS_133_AND_134_SUCCESS; 20_TESTS_PASSED_IN_BOTH_RUNS; CURRENT_PLATFORM_RUN_IN_PROGRESS; FINAL_RECORD_COMMIT_CI_PENDING; TERMINAL_RECONCILIATION_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -107,5 +107,25 @@
     "artifacts": 0,
     "artifact_upload_step_present": false,
     "note": "Run 133 is the post-commit CI for the initial 2026-11-21 evidence commit. The runner checked out GitHub's synthetic PR merge commit combining that branch head with main; it did not execute the branch SHA directly."
+  },
+  "metadata_update_commit": "5aa3fbc06ecc2d9c0f5f38e5014e0c81600128e0",
+  "final_record_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 44909098955,
+    "run_number": 134,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "5aa3fbc06ecc2d9c0f5f38e5014e0c81600128e0",
+    "job_name": "test",
+    "job_id": 136860895975,
+    "runner_checkout_ref": "refs/remotes/pull/16/merge",
+    "runner_checkout_sha": "e3b51acee8b67cfb09a41d92a9645818b5c0a868",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "20 passed in 0.11s",
+    "job_steps": "Set up job, checkout, Python 3.13 setup, pip/pytest installation, pytest execution, post-setup cleanup, post-checkout cleanup and complete job all completed successfully.",
+    "artifacts": 0,
+    "artifact_upload_step_present": false,
+    "note": "Run 134 validates the metadata-update commit 5aa3fbc, which records Run 133 and the initial evidence commit. The runner checked out GitHub's synthetic PR merge commit combining that head with main; it did not execute the branch SHA directly."
   }
 }
