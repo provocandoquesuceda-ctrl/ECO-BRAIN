@@ -74,7 +74,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRE_AUDIT_CI_RUN_132_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUNS_133_AND_134_SUCCESS; 20_TESTS_PASSED_IN_BOTH_RUNS; CURRENT_PLATFORM_RUN_IN_PROGRESS; FINAL_RECORD_COMMIT_CI_PENDING; TERMINAL_RECONCILIATION_PENDING",
+  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUNS_133_AND_134_SUCCESS; 20_TESTS_PASSED_IN_BOTH_RUNS; FINAL_PLATFORM_RECHECK_COMPLETED; TERMINAL_RECONCILIATION_RECORDED; FINAL_RECONCILIATION_COMMIT_CI_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -127,5 +127,14 @@
     "artifacts": 0,
     "artifact_upload_step_present": false,
     "note": "Run 134 validates the metadata-update commit 5aa3fbc, which records Run 133 and the initial evidence commit. The runner checked out GitHub's synthetic PR merge commit combining that head with main; it did not execute the branch SHA directly."
+  },
+  "final_platform_recheck": {
+    "automation_run_id": "1d350f25-07e0-832b-8ca5-50cd3125e63a",
+    "recorded_status": "completed",
+    "scheduled_for": "2026-11-21T13:00:37Z",
+    "started_at": "2026-11-21T13:26:37.427570Z",
+    "completed_at": "2026-11-21T13:32:15.340377Z",
+    "source": "Read-only Automation peek after the same run reached its terminal state; last_run.id and latest_result.run_id both match this automation_run_id.",
+    "note": "The original capture remains unchanged with recorded_status=in_progress and completed_at=null. This final_platform_recheck records the later terminal observation for the exact same run."
   }
 }
