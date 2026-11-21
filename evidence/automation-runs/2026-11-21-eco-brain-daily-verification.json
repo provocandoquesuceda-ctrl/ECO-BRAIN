@@ -46,7 +46,11 @@
       "human_reviews": 0,
       "review_threads": 0
     },
-    "main_documentation_observation": "STATUS.md and NEXT.md on main still show LAST VERIFIED 2026-09-13 and the earlier Daily Verification gap. They were not modified because the new evidence remains on an unmerged draft PR."
+    "main_documentation_observation": "STATUS.md and NEXT.md on main still show LAST VERIFIED 2026-09-13 and the earlier Daily Verification gap. They were not modified because the new evidence remains on an unmerged draft PR.",
+    "evidence_branch_head_after_initial_evidence_commit": "32817901749d38c5b750117744e2895c78983ad2",
+    "ahead_by_after_initial_evidence_commit": 59,
+    "behind_by_after_initial_evidence_commit": 0,
+    "changed_files_after_initial_evidence_commit": 16
   },
   "pre_audit_ci_validation": {
     "workflow": "ECO-BRAIN Verification",
@@ -70,7 +74,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRE_AUDIT_CI_RUN_132_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; PRE_AUDIT_CI_RUN_132_SUCCESS; CURRENT_PLATFORM_RUN_IN_PROGRESS; POST_COMMIT_CI_PENDING; TERMINAL_RECONCILIATION_PENDING",
+  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; POST_COMMIT_CI_RUN_133_SUCCESS; 20_TESTS_PASSED; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING; FINAL_RECORD_CI_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -83,5 +87,25 @@
     "other_automations_touched": false,
     "automation_schedules_or_prompts_modified": false,
     "only_daily_evidence_json_added": true
+  },
+  "initial_evidence_commit": "32817901749d38c5b750117744e2895c78983ad2",
+  "post_commit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 44909051954,
+    "run_number": 133,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "32817901749d38c5b750117744e2895c78983ad2",
+    "job_name": "test",
+    "job_id": 136860746895,
+    "runner_checkout_ref": "refs/remotes/pull/16/merge",
+    "runner_checkout_sha": "53941908f99eac2411aa1403c31f1b332f413c7c",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "20 passed in 0.10s",
+    "job_steps": "Set up job, checkout, Python 3.13 setup, pip/pytest installation, pytest execution, post-setup cleanup, post-checkout cleanup and complete job all completed successfully.",
+    "artifacts": 0,
+    "artifact_upload_step_present": false,
+    "note": "Run 133 is the post-commit CI for the initial 2026-11-21 evidence commit. The runner checked out GitHub's synthetic PR merge commit combining that branch head with main; it did not execute the branch SHA directly."
   }
 }
