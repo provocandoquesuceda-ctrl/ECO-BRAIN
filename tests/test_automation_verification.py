@@ -262,3 +262,33 @@ def test_daily_verification_20261119_evidence_preserves_capture_and_terminal_rec
     assert final_recheck["recorded_status"] == "completed"
     assert final_recheck["completed_at"] == "2026-11-19T13:24:20.304205Z"
     assert final_recheck["historical_capture_preserved"] is True
+
+
+
+def test_daily_verification_20261121_evidence_preserves_capture_and_terminal_recheck():
+    evidence_path = (
+        Path(__file__).resolve().parents[1]
+        / "evidence/automation-runs/2026-11-21-eco-brain-daily-verification.json"
+    )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    validate_verification_record(evidence["verification_record"])
+
+    assert evidence["automation_id"] == "6a9eb5753ed08191819558c94fab138a"
+    assert evidence["automation_run_id"] == "1d350f25-07e0-832b-8ca5-50cd3125e63a"
+    assert evidence["automation_run_status_at_initial_capture"] == "in_progress"
+    assert evidence["scheduled_for"] == "2026-11-21T13:00:37Z"
+    assert evidence["started_at"] == "2026-11-21T13:26:37.427570Z"
+    assert evidence["timestamp"] == evidence["started_at"]
+    assert evidence["completed_at"] is None
+    assert evidence["trace_id"] == "TRC-ECO-BRAIN-DV-20261121T132637Z"
+    assert evidence["verification_record"]["trace_id"] == evidence["trace_id"]
+    assert evidence["verification_record"]["eco_cel_status"] == (
+        "NOT_REVALIDATED_IN_THIS_AUDIT"
+    )
+
+    final_recheck = evidence["final_platform_recheck"]
+    assert final_recheck["automation_run_id"] == evidence["automation_run_id"]
+    assert final_recheck["recorded_status"] == "completed"
+    assert final_recheck["completed_at"] == "2026-11-21T13:32:15.340377Z"
+    assert "original capture remains unchanged" in final_recheck["note"].lower()
