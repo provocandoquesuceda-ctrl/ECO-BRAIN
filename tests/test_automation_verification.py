@@ -217,6 +217,7 @@ def test_daily_verification_20261117_audit_record_captures_target_run_after_init
 
     validate_verification_record(evidence["verification_record"])
 
+    assert evidence["verification_record"]["observed_status"] == "in_progress"
     assert evidence["automation_id"] == "6a9eb5753ed08191819558c94fab138a"
     assert evidence["automation_run_id"] == "078ac166-af94-8326-87f4-c4520c64bf47"
     assert evidence["automation_run_status_at_capture"] == "in_progress"

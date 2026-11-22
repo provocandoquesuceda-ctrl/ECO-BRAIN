@@ -19,7 +19,8 @@
     "observed_status_at_initial_capture": "in_progress",
     "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
     "trace_id": "TRC-ECO-BRAIN-DV-20261121T132637Z",
-    "execution_evidence": "Read-only automation lookup identified last_run.id=1d350f25-07e0-832b-8ca5-50cd3125e63a; scheduled_for=2026-11-21T13:00:37Z; started_at=2026-11-21T13:26:37.427570Z; recorded_status=in_progress; completed_at=null. The latest published result returned by the platform belongs to the prior 2026-11-20 run b6d7e005-ab9c-8325-af1d-b6fad558e4a4, completed_at=2026-11-20T13:58:34.169924Z; it was not attributed to the 2026-11-21 run."
+    "execution_evidence": "Read-only automation lookup identified last_run.id=1d350f25-07e0-832b-8ca5-50cd3125e63a; scheduled_for=2026-11-21T13:00:37Z; started_at=2026-11-21T13:26:37.427570Z; recorded_status=in_progress; completed_at=null. The latest published result returned by the platform belongs to the prior 2026-11-20 run b6d7e005-ab9c-8325-af1d-b6fad558e4a4, completed_at=2026-11-20T13:58:34.169924Z; it was not attributed to the 2026-11-21 run.",
+    "observed_status": "in_progress"
   },
   "latest_published_result_reconciliation": {
     "run_id": "b6d7e005-ab9c-8325-af1d-b6fad558e4a4",
