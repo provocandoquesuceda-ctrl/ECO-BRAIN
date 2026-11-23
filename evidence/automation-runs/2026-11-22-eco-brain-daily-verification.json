@@ -125,9 +125,8 @@
     "started_at": "2026-11-22T13:26:20.173309Z",
     "recorded_status": "completed",
     "completed_at": "2026-11-22T13:32:16.866621Z",
-    "rechecked_at": "2026-11-23T13:25:27Z",
     "latest_result_run_id": "1252383f-bd24-8331-8cbf-ed6143230f73",
-    "source": "Read-only Automation peek after the same run reached its terminal state; last_run.id and latest_result.run_id both match this automation_run_id.",
+    "source": "Read-only Automation peek on 2026-11-23 after the same run reached its terminal state; last_run.id and latest_result.run_id both match this automation_run_id.",
     "same_automation_run_id_confirmed": true,
     "historical_capture_preserved": true,
     "note": "The original capture remains unchanged with recorded_status=in_progress and completed_at=null. This final_platform_recheck records the later terminal observation for the exact same run."
