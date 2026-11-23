@@ -86,7 +86,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_RUN_RECONCILED; PRE_AUDIT_CI_RUN_139_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "DAILY_VERIFICATION_EVIDENCE_PERSISTED; FINAL_PLATFORM_RECHECK_COMPLETED; TERMINAL_RECONCILIATION_RECORDED; PRE_RECONCILIATION_CI_RUN_141_SUCCESS; 21_TESTS_PASSED; POST_RECONCILIATION_CI_PENDING",
+  "result": "DAILY_VERIFICATION_RUN_TERMINAL_COMPLETED; HISTORICAL_CAPTURE_PRESERVED; TERMINAL_RECONCILIATION_EVIDENCE_PERSISTED; REGRESSION_TEST_ADDED; RUN_142_AND_RUN_143_SUCCESS; 22_TESTS_PASSED",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -150,5 +150,43 @@
     "artifacts": 0,
     "artifact_upload_step_present": false,
     "note": "Run 141 validates the prior evidence-branch head before this terminal-reconciliation commit. The runner checked out GitHub's synthetic PR merge commit combining the branch head with main."
+  },
+  "terminal_reconciliation_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45184043222,
+    "run_number": 142,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "7cff21358bf259cc4c9fe7ed1e9660d33d0981f5",
+    "job_name": "test",
+    "job_id": 137724888845,
+    "runner_checkout_ref": "refs/remotes/pull/16/merge",
+    "runner_checkout_sha": "9c671f886db6a57dba44df5d66a0644a1252c672",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "21 passed in 0.09s",
+    "job_steps": "All steps completed successfully.",
+    "artifacts": 0,
+    "artifact_upload_step_present": false,
+    "note": "Run 142 is the post-commit CI for the terminal-reconciliation evidence commit. GitHub Actions checked out the synthetic PR merge commit combining the branch head with main."
+  },
+  "regression_test_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45184062941,
+    "run_number": 143,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "9a4c55e0c14224229822550d2d4410b9331f629b",
+    "job_name": "test",
+    "job_id": 137724968825,
+    "runner_checkout_ref": "refs/remotes/pull/16/merge",
+    "runner_checkout_sha": "a92c5a2795edf238f4e79385945cd06ba02c1f78",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.08s",
+    "job_steps": "All steps completed successfully.",
+    "artifacts": 0,
+    "artifact_upload_step_present": false,
+    "note": "Run 143 is the post-commit CI for the new 2026-11-22 terminal-reconciliation regression test. GitHub Actions checked out the synthetic PR merge commit combining the branch head with main."
   }
 }
