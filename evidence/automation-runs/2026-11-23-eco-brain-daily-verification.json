@@ -77,7 +77,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_22_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_145_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "EVIDENCE_RECORD_PERSISTED; PLATFORM_RUN_2026_11_23_TERMINAL_RECONCILED_COMPLETED; POST_COMMIT_CI_RUNS_146_147_148_SUCCESS; FINAL_TERMINAL_RECONCILIATION_CI_PENDING",
+  "result": "PLATFORM_RUN_2026_11_23_TERMINAL_RECONCILED_COMPLETED; EVIDENCE_RECORD_PERSISTED; POST_RECONCILIATION_CI_RUN_149_SUCCESS; FINAL_METADATA_COMMIT_CI_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -140,5 +140,22 @@
     "latest_result_completed_at": "2026-11-23T13:52:25.539163Z",
     "identity_confirmed": true,
     "source": "Read-only Automation peek after the execution had reached its terminal state. The platform last_run.id and latest_result.run_id both match the recorded automation_run_id. The initial in_progress capture is preserved unchanged."
+  },
+  "post_terminal_reconciliation_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45402015685,
+    "run_number": 149,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "fd6e384905f18bf2be0f58144615188d56010d41",
+    "job_name": "test",
+    "job_id": 138472779984,
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.12s",
+    "job_steps": "Set up job, checkout, Python 3.13 setup, pip/pytest installation, pytest execution, post-setup cleanup, post-checkout cleanup and complete job all completed successfully.",
+    "artifacts": 0,
+    "artifact_upload_step_present": false,
+    "note": "Run 149 is the post-commit CI for the terminal-status reconciliation. The workflow has no artifact-upload step; the evidence JSON, commit and job logs remain persistent."
   }
 }
