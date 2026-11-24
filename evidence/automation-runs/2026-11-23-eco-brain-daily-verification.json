@@ -77,7 +77,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_22_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_145_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "EVIDENCE_RECORD_PERSISTED; POST_COMMIT_CI_RUN_146_SUCCESS; METADATA_CI_RUN_147_SUCCESS; PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
+  "result": "EVIDENCE_RECORD_PERSISTED; PLATFORM_RUN_2026_11_23_TERMINAL_RECONCILED_COMPLETED; POST_COMMIT_CI_RUNS_146_147_148_SUCCESS; FINAL_TERMINAL_RECONCILIATION_CI_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -127,5 +127,18 @@
     "artifacts": 0,
     "artifact_upload_step_present": false,
     "note": "Run 147 validates the commit that recorded Run 146's result in the evidence JSON."
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "run_id": "342362f7-0430-8323-9acd-f89583d82fdb",
+    "recorded_status": "completed",
+    "scheduled_for": "2026-11-23T13:00:37Z",
+    "started_at": "2026-11-23T13:47:46.236948Z",
+    "completed_at": "2026-11-23T13:52:25.539163Z",
+    "latest_result_run_id": "342362f7-0430-8323-9acd-f89583d82fdb",
+    "latest_result_created_at": "2026-11-23T13:52:24.658603Z",
+    "latest_result_completed_at": "2026-11-23T13:52:25.539163Z",
+    "identity_confirmed": true,
+    "source": "Read-only Automation peek after the execution had reached its terminal state. The platform last_run.id and latest_result.run_id both match the recorded automation_run_id. The initial in_progress capture is preserved unchanged."
   }
 }
