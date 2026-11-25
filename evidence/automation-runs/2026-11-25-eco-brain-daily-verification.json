@@ -68,7 +68,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_24_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_152_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "EVIDENCE_RECORD_PERSISTED; POST_COMMIT_CI_PENDING; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
+  "result": "EVIDENCE_RECORD_PERSISTED; POST_COMMIT_CI_RUN_153_SUCCESS; 22_TESTS_PASSED; FINAL_METADATA_CI_PENDING; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -81,5 +81,22 @@
     "other_automations_touched": false,
     "automation_schedules_or_prompts_modified": false,
     "only_daily_evidence_json_added": true
+  },
+  "post_commit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45622838499,
+    "run_number": 153,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "e0588d0c960f20531aaf04f75df46852640de185",
+    "job_name": "test",
+    "job_id": 139235236817,
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.09s",
+    "job_steps": "Setup, checkout, Python 3.13 setup, pytest installation, pytest execution and cleanup completed successfully.",
+    "artifacts": [],
+    "artifact_upload_step_present": false,
+    "note": "Run 153 is the post-commit CI for the initial 2026-11-25 evidence record."
   }
 }
