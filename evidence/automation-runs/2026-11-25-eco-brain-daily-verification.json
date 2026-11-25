@@ -68,7 +68,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_24_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_152_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "EVIDENCE_RECORDED; CI_RUN_153_SUCCESS; FINAL_METADATA_COMMIT_CI_RUN_154_SUCCESS; 22_TESTS_PASSED_IN_EACH; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
+  "result": "2026-11-25 platform run terminally reconciled as completed; evidence persisted; CI_RUN_156_SUCCESS; 22 tests passed; final post-metadata CI pending.",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -128,5 +128,22 @@
     "identity_match": true,
     "interpretation": "The initial evidence capture remains unchanged with in_progress and completed_at=null. This separate read-only observation confirms that the same run later reached completed."
   },
-  "terminal_reconciliation_result": "2026-11-25 Daily Verification run ad1ac941-e7e4-832f-aa07-482d68c8f57d rechecked as completed; original capture preserved."
+  "terminal_reconciliation_result": "2026-11-25 Daily Verification run ad1ac941-e7e4-832f-aa07-482d68c8f57d rechecked as completed; original capture preserved.",
+  "terminal_reconciliation_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45627430552,
+    "run_number": 156,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/45627430552",
+    "job_id": 139251261442,
+    "job_name": "test",
+    "status": "completed",
+    "conclusion": "success",
+    "validated_commit": "16b22c36c979c8b5c2da620e885197feb2dea89c",
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.09s",
+    "artifacts": [],
+    "artifact_upload_step_present": false,
+    "note": "Run 156 validates the terminal-status reconciliation commit. Job steps and logs were fetched; all steps completed successfully."
+  }
 }
