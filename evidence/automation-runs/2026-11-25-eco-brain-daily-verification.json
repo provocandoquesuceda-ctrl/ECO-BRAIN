@@ -114,5 +114,19 @@
     "artifacts": [],
     "artifact_upload_step_present": false,
     "note": "Run 154 is the post-commit CI for the metadata commit that records Run 153."
-  }
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "run_id": "ad1ac941-e7e4-832f-aa07-482d68c8f57d",
+    "source": "Read-only Automation peek, rechecked during ECO-BRAIN Daily Sprint on 2026-11-25",
+    "rechecked_at": "2026-11-25T13:47:22Z",
+    "recorded_status": "completed",
+    "started_at": "2026-11-25T13:21:00.274674Z",
+    "completed_at": "2026-11-25T13:24:31.090424Z",
+    "latest_result_run_id": "ad1ac941-e7e4-832f-aa07-482d68c8f57d",
+    "latest_result_completed_at": "2026-11-25T13:24:31.090424Z",
+    "identity_match": true,
+    "interpretation": "The initial evidence capture remains unchanged with in_progress and completed_at=null. This separate read-only observation confirms that the same run later reached completed."
+  },
+  "terminal_reconciliation_result": "2026-11-25 Daily Verification run ad1ac941-e7e4-832f-aa07-482d68c8f57d rechecked as completed; original capture preserved."
 }
