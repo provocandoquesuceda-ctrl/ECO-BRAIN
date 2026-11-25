@@ -68,7 +68,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_24_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_152_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "EVIDENCE_RECORD_PERSISTED; POST_COMMIT_CI_RUN_153_SUCCESS; 22_TESTS_PASSED; FINAL_METADATA_CI_PENDING; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
+  "result": "EVIDENCE_RECORDED; CI_RUN_153_SUCCESS; FINAL_METADATA_COMMIT_CI_RUN_154_SUCCESS; 22_TESTS_PASSED_IN_EACH; CURRENT_PLATFORM_RUN_IN_PROGRESS; TERMINAL_RECONCILIATION_PENDING",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -98,5 +98,21 @@
     "artifacts": [],
     "artifact_upload_step_present": false,
     "note": "Run 153 is the post-commit CI for the initial 2026-11-25 evidence record."
+  },
+  "final_metadata_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45622941293,
+    "run_number": 154,
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "843c5ed0a33498556a8f25bd8e1e0482f93a4827",
+    "job_name": "test",
+    "job_id": 139235586112,
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.09s",
+    "artifacts": [],
+    "artifact_upload_step_present": false,
+    "note": "Run 154 is the post-commit CI for the metadata commit that records Run 153."
   }
 }
