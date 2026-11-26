@@ -66,7 +66,7 @@
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "eco_cel_scope_note": "ECO-CEL was not inspected, executed, configured or modified. No live ECO-CEL integration or current status is inferred.",
   "initial_result_at_capture": "CURRENT_DAILY_VERIFICATION_RUN_IDENTIFIED; CURRENT_PLATFORM_RUN_IN_PROGRESS; PRIOR_2026_11_25_RUN_TERMINAL_RECONCILED; PRE_AUDIT_CI_RUN_160_SUCCESS; POST_COMMIT_CI_PENDING",
-  "result": "2026-11-26 Daily Verification run identified; evidence record persisted; pre-audit CI run 160 successful with 22 tests; current platform run was in_progress at capture; post-commit CI pending.",
+  "result": "2026-11-26 Daily Verification evidence persisted; post-commit CI run 161 completed successfully with 22 tests; current platform run remained in_progress at initial capture; final metadata CI pending.",
   "perimeter": {
     "main_modified": false,
     "functional_code_modified": false,
@@ -79,5 +79,23 @@
     "other_automations_touched": false,
     "automation_schedules_or_prompts_modified": false,
     "only_daily_evidence_json_added": true
+  },
+  "post_commit_ci_validation": {
+    "workflow": "ECO-BRAIN Verification",
+    "workflow_path": ".github/workflows/tests.yml",
+    "workflow_run_id": 45833642142,
+    "run_number": 161,
+    "run_url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/45833642142",
+    "status": "completed",
+    "conclusion": "success",
+    "validated_branch_commit": "faf32962c72ec2fdc3f88b68788d4e1f19451f32",
+    "job_name": "test",
+    "job_id": 139956636898,
+    "test_command": "PYTHONPATH=. pytest -q",
+    "test_result": "22 passed in 0.08s",
+    "job_steps": "Setup, checkout, Python 3.13.18 setup, pytest installation, pytest execution and cleanup all completed successfully.",
+    "artifacts": [],
+    "artifact_upload_step_present": false,
+    "note": "Run 161 is the post-commit CI for the initial 2026-11-26 evidence record. The final job and logs were fetched; all steps completed successfully."
   }
 }
