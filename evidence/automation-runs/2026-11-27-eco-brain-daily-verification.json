@@ -6,7 +6,7 @@
   "trace_id": "TRC-ECO-BRAIN-DV-20261127T131717Z",
   "timestamp": "2026-11-27T13:17:17.853525Z",
   "scheduled_for": "2026-11-27T13:00:37Z",
-  "capacity_verified": "ECO-BRAIN Daily Verification — identifying the current platform run, recording an independent trace, observing main, and preserving the evidence record.",
+  "capacity_verified": "ECO-BRAIN Daily Verification — identify the platform run, capture an independent trace, observe main, persist the record, and validate it with CI.",
   "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
   "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
   "platform_observation": {
@@ -14,12 +14,25 @@
     "completed_at": null,
     "observation_source": "Automation platform read-only peek",
     "observed_at": "2026-11-27T13:17:17.853525Z",
-    "note": "This is the current run's capture; the latest published result at this observation belongs to the prior run and is not attributed to this run."
+    "note": "The latest published result at capture belonged to the previous run and was not attributed to this run."
+  },
+  "evidence_commit": "ccb40bdebf0b8e5c761ec01b1b7acbd702382d16",
+  "ci_validation": {
+    "run_id": 46005933186,
+    "run_number": 163,
+    "job_id": 140528968908,
+    "commit": "ccb40bdebf0b8e5c761ec01b1b7acbd702382d16",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.13s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46005933186"
   },
   "result": {
-    "status": "evidence_recorded_pending_post_commit_ci",
-    "claim": "Daily Verification evidence record created on the isolated audit branch. No ECO-CEL execution or live integration is claimed.",
-    "ci": "pending"
+    "status": "evidence_persisted_and_ci_verified",
+    "claim": "Daily Verification evidence record passed the repository test suite in CI. This does not claim terminal completion of the platform run or live ECO-CEL integration."
   },
   "scope": {
     "main_modified": false,
