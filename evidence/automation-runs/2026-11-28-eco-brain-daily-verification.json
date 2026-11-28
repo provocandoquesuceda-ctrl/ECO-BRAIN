@@ -60,8 +60,8 @@
     "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150650769"
   },
   "result": {
-    "status": "evidence_persisted_terminal_recheck",
-    "claim": "The initial capture recorded in_progress. A later read-only recheck of the same automation run confirms recorded_status=completed and the exact completed_at. This does not claim live ECO-CEL integration or completion of the full ECO-BRAIN v0.1 ecosystem."
+    "status": "terminal_recheck_persisted_and_ci_verified",
+    "claim": "The same Daily Verification automation run was re-read and confirmed completed at the recorded timestamp. The terminal recheck evidence commit passed GitHub Actions CI (22 tests). This does not claim live ECO-CEL integration or completion of the full ECO-BRAIN v0.1 ecosystem."
   },
   "scope": {
     "main_modified": false,
@@ -80,5 +80,17 @@
     "observation_source": "Read-only automation history peek; last_run.id and latest_result.run_id match",
     "rechecked_after": "2026-11-28T13:40:58.210326Z",
     "note": "The initial platform_observation remains unchanged as historical evidence. The later run-history recheck confirms the same automation run reached completed. No ECO-CEL live integration is inferred."
+  },
+  "terminal_recheck_ci_validation": {
+    "run_id": 46151807871,
+    "run_number": 169,
+    "job_id": 140999855644,
+    "commit": "3f8db0441dfd0be4c88057569106d2e5d97be1ae",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "tests": "22 passed in 0.08s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46151807871"
   }
 }
