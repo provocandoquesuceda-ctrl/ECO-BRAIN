@@ -14,7 +14,7 @@
     "completed_at": null,
     "observation_source": "Automation platform read-only peek",
     "observed_at": "2026-11-28T13:36:53.428588Z",
-    "note": "The platform run was recorded in_progress at the audit capture. The latest published terminal result before this run was the prior day's result."
+    "note": "The platform run was recorded in_progress at the audit capture. The latest published terminal result before this run was the previous day's result."
   },
   "evidence_commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
   "ci_validation": {
@@ -44,11 +44,24 @@
     "artifacts": 0,
     "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150592915"
   },
-  "final_evidence_commit": "pending_this_commit",
-  "final_ci_run_id": "pending_post_commit_validation",
+  "final_evidence_commit": "89ab19da198331929fe311bb924cb4908a517a40",
+  "final_ci_run_id": 46150650769,
+  "final_ci": {
+    "run_id": 46150650769,
+    "run_number": 167,
+    "job_id": 140996345943,
+    "commit": "89ab19da198331929fe311bb924cb4908a517a40",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150650769"
+  },
   "result": {
-    "status": "evidence_persisted_two_ci_successes_final_validation_pending",
-    "claim": "Initial evidence commit and its metadata commit both passed CI. This final file revision records those results and will be validated by the next post-commit CI. Platform terminal completion and live ECO-CEL integration are not claimed."
+    "status": "evidence_persisted_and_three_ci_successes",
+    "claim": "The initial evidence, metadata and final evidence commits each passed GitHub Actions CI. This record does not claim terminal completion of the platform run or live ECO-CEL integration."
   },
   "scope": {
     "main_modified": false,
