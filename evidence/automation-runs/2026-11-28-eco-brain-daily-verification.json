@@ -14,7 +14,7 @@
     "completed_at": null,
     "observation_source": "Automation platform read-only peek",
     "observed_at": "2026-11-28T13:36:53.428588Z",
-    "note": "The current run is still recorded in_progress. The latest published completed result belongs to the previous run and is not attributed to this run."
+    "note": "The platform run was recorded in_progress at the audit capture. The latest published terminal result before this run was the prior day's result."
   },
   "evidence_commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
   "ci_validation": {
@@ -30,11 +30,25 @@
     "artifacts": 0,
     "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150549538"
   },
-  "final_evidence_commit": null,
-  "final_ci_run_id": null,
+  "metadata_commit": "6d6b20e2fc0a229507b82e988af8bffc3dd533a1",
+  "metadata_ci": {
+    "run_id": 46150592915,
+    "run_number": 166,
+    "job_id": 140996165314,
+    "commit": "6d6b20e2fc0a229507b82e988af8bffc3dd533a1",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150592915"
+  },
+  "final_evidence_commit": "pending_this_commit",
+  "final_ci_run_id": "pending_post_commit_validation",
   "result": {
-    "status": "evidence_persisted_and_ci_verified",
-    "claim": "The initial Daily Verification evidence commit passed the repository test suite in GitHub Actions. A final metadata commit will be validated by its own post-commit CI. This does not claim terminal completion of the platform run or live ECO-CEL integration."
+    "status": "evidence_persisted_two_ci_successes_final_validation_pending",
+    "claim": "Initial evidence commit and its metadata commit both passed CI. This final file revision records those results and will be validated by the next post-commit CI. Platform terminal completion and live ECO-CEL integration are not claimed."
   },
   "scope": {
     "main_modified": false,
