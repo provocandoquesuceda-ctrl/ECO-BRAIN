@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-28",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": "d9db3655-504c-832d-81ed-c810fc8423ce",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261128T133653Z",
+  "timestamp": "2026-11-28T13:36:53.428588Z",
+  "scheduled_for": "2026-11-28T13:00:37Z",
+  "capacity_verified": "ECO-BRAIN Daily Verification — identify the platform run, capture an independent trace, observe main, persist the record, and validate it with CI.",
+  "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "platform_observation": {
+    "recorded_status": "in_progress",
+    "completed_at": null,
+    "observation_source": "Automation platform read-only peek",
+    "observed_at": "2026-11-28T13:36:53.428588Z",
+    "note": "The current run is still recorded in_progress. The latest published completed result belongs to the prior run; it is not attributed to this run."
+  },
+  "evidence_commit": null,
+  "ci_validation": null,
+  "result": {
+    "status": "evidence_captured_ci_pending",
+    "claim": "Daily Verification run and main commit were independently captured. This does not claim terminal completion of the platform run or live ECO-CEL integration."
+  },
+  "scope": {
+    "main_modified": false,
+    "merged": false,
+    "architecture_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_touched": false,
+    "eco_ship_touched": false,
+    "other_automations_modified": false
+  }
+}
