@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-28",
+  "automation_id": "6a9eb5753ed08191819558c94fab138a",
+  "automation_run_id": "d9db3655-504c-832d-81ed-c810fc8423ce",
+  "trace_id": "TRC-ECO-BRAIN-DV-20261128T133653Z",
+  "timestamp": "2026-11-28T13:36:53.428588Z",
+  "scheduled_for": "2026-11-28T13:00:37Z",
+  "capacity_verified": "ECO-BRAIN Daily Verification — identify the platform run, capture an independent trace, observe main, persist the record, and validate it with CI.",
+  "observed_commit": "e74f26368ff51893cc0fd13c2fe1f21ac6dc3d30",
+  "eco_cel_status": "NOT_REVALIDATED_IN_THIS_AUDIT",
+  "platform_observation": {
+    "recorded_status": "in_progress",
+    "completed_at": null,
+    "observation_source": "Automation platform read-only peek",
+    "observed_at": "2026-11-28T13:36:53.428588Z",
+    "note": "The platform run was recorded in_progress at the audit capture. The latest published terminal result before this run was the previous day's result."
+  },
+  "evidence_commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
+  "ci_validation": {
+    "run_id": 46150549538,
+    "run_number": 165,
+    "job_id": 140996029779,
+    "commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150549538"
+  },
+  "metadata_commit": "6d6b20e2fc0a229507b82e988af8bffc3dd533a1",
+  "metadata_ci": {
+    "run_id": 46150592915,
+    "run_number": 166,
+    "job_id": 140996165314,
+    "commit": "6d6b20e2fc0a229507b82e988af8bffc3dd533a1",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150592915"
+  },
+  "final_evidence_commit": "89ab19da198331929fe311bb924cb4908a517a40",
+  "final_ci_run_id": 46150650769,
+  "final_ci": {
+    "run_id": 46150650769,
+    "run_number": 167,
+    "job_id": 140996345943,
+    "commit": "89ab19da198331929fe311bb924cb4908a517a40",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150650769"
+  },
+  "result": {
+    "status": "terminal_recheck_persisted_and_ci_verified",
+    "claim": "The same Daily Verification automation run was re-read and confirmed completed at the recorded timestamp. The terminal recheck evidence commit passed GitHub Actions CI (22 tests). This does not claim live ECO-CEL integration or completion of the full ECO-BRAIN v0.1 ecosystem."
+  },
+  "scope": {
+    "main_modified": false,
+    "merged": false,
+    "architecture_changed": false,
+    "eco_continuity_001_modified": false,
+    "eco_cel_touched": false,
+    "eco_ship_touched": false,
+    "other_automations_modified": false
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "automation_run_id": "d9db3655-504c-832d-81ed-c810fc8423ce",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-28T13:40:34.761998Z",
+    "observation_source": "Read-only automation history peek; last_run.id and latest_result.run_id match",
+    "rechecked_after": "2026-11-28T13:40:58.210326Z",
+    "note": "The initial platform_observation remains unchanged as historical evidence. The later run-history recheck confirms the same automation run reached completed. No ECO-CEL live integration is inferred."
+  },
+  "terminal_recheck_ci_validation": {
+    "run_id": 46151807871,
+    "run_number": 169,
+    "job_id": 140999855644,
+    "commit": "3f8db0441dfd0be4c88057569106d2e5d97be1ae",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "tests": "22 passed in 0.08s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46151807871"
+  }
+}
