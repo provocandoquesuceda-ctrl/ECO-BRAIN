@@ -60,8 +60,8 @@
     "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150650769"
   },
   "result": {
-    "status": "evidence_persisted_and_three_ci_successes",
-    "claim": "The initial evidence, metadata and final evidence commits each passed GitHub Actions CI. This record does not claim terminal completion of the platform run or live ECO-CEL integration."
+    "status": "evidence_persisted_terminal_recheck",
+    "claim": "The initial capture recorded in_progress. A later read-only recheck of the same automation run confirms recorded_status=completed and the exact completed_at. This does not claim live ECO-CEL integration or completion of the full ECO-BRAIN v0.1 ecosystem."
   },
   "scope": {
     "main_modified": false,
@@ -71,5 +71,14 @@
     "eco_cel_touched": false,
     "eco_ship_touched": false,
     "other_automations_modified": false
+  },
+  "final_platform_recheck": {
+    "automation_id": "6a9eb5753ed08191819558c94fab138a",
+    "automation_run_id": "d9db3655-504c-832d-81ed-c810fc8423ce",
+    "recorded_status": "completed",
+    "completed_at": "2026-11-28T13:40:34.761998Z",
+    "observation_source": "Read-only automation history peek; last_run.id and latest_result.run_id match",
+    "rechecked_after": "2026-11-28T13:40:58.210326Z",
+    "note": "The initial platform_observation remains unchanged as historical evidence. The later run-history recheck confirms the same automation run reached completed. No ECO-CEL live integration is inferred."
   }
 }
