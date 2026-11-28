@@ -14,13 +14,27 @@
     "completed_at": null,
     "observation_source": "Automation platform read-only peek",
     "observed_at": "2026-11-28T13:36:53.428588Z",
-    "note": "The current run is still recorded in_progress. The latest published completed result belongs to the prior run; it is not attributed to this run."
+    "note": "The current run is still recorded in_progress. The latest published completed result belongs to the previous run and is not attributed to this run."
   },
-  "evidence_commit": null,
-  "ci_validation": null,
+  "evidence_commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
+  "ci_validation": {
+    "run_id": 46150549538,
+    "run_number": 165,
+    "job_id": 140996029779,
+    "commit": "015098e70fd4a0e04b6cf188c6dca69da34aa0f5",
+    "status": "completed",
+    "conclusion": "success",
+    "command": "PYTHONPATH=. pytest -q",
+    "python": "3.13.18",
+    "tests": "22 passed in 0.09s",
+    "artifacts": 0,
+    "url": "https://github.com/provocandoquesuceda-ctrl/ECO-BRAIN/actions/runs/46150549538"
+  },
+  "final_evidence_commit": null,
+  "final_ci_run_id": null,
   "result": {
-    "status": "evidence_captured_ci_pending",
-    "claim": "Daily Verification run and main commit were independently captured. This does not claim terminal completion of the platform run or live ECO-CEL integration."
+    "status": "evidence_persisted_and_ci_verified",
+    "claim": "The initial Daily Verification evidence commit passed the repository test suite in GitHub Actions. A final metadata commit will be validated by its own post-commit CI. This does not claim terminal completion of the platform run or live ECO-CEL integration."
   },
   "scope": {
     "main_modified": false,
